@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Assets/Animation.meta
 guid: 516f3a547897cff4a9f7f8b3f72dd2c3
+=======
+guid: a69f57e6965dcd449b962ab4cfa567b0
+>>>>>>> Stashed changes:Assets/3erParty/Garaje.meta
+=======
+guid: 516f3a547897cff4a9f7f8b3f72dd2c3
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
