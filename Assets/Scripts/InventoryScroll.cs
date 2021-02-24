@@ -10,15 +10,15 @@ public class InventoryScroll : MonoBehaviour
 
     void Awake()
     {
-        scale = new Vector3(0f, 139f, 0f);
+        scale = new Vector3(225f, 0f, 0f);
     }
 
     void Update()
     {
-        Vector3 pos = imgSelector.transform.position;
+        Vector3 pos = imgSelector.transform.localPosition;
         pos += Mathf.Clamp(Input.mouseScrollDelta.y, -1f, 1f) * scale;
-        if (pos.y > 819) { pos.y = 124; }
-        if (pos.y < 124) { pos.y = 819; }
-        imgSelector.transform.position = pos;
+        if (pos.x > 225) { pos.x = -225; }
+        if (pos.x < -225) { pos.x = 225; }
+        imgSelector.transform.localPosition = pos;
     }
 }
