@@ -116,7 +116,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump)
                 {
-                    m_MoveDir.y = m_JumpSpeed;
+                    //m_MoveDir.y = m_JumpSpeed;
                     //PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;

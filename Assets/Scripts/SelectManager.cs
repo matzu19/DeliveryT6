@@ -31,7 +31,6 @@ public class SelectManager : MonoBehaviour
                     selectionRenderer.material = highlightMaterial;
                     if(Input.GetButton("Fire1")) selection.GetComponent<PickableManager>().IsPickable();
                 }
-
                 _selection = selection;
             }
         }
