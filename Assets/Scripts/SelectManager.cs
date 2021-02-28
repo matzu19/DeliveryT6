@@ -7,9 +7,16 @@ public class SelectManager : MonoBehaviour
     [SerializeField] private string selectableTag = "Selectable";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
-    private PickableManager pickable;
+    //private PickableManager pickable;
+    [SerializeField] private InventoryManager bagManager;
+    private List<GameObject> inventory;
+
 
     private Transform _selection;
+    private void Awake()
+    {
+        inventory = new List<GameObject>();
+    }
     void Update()
     {
         if(_selection != null)
@@ -34,5 +41,21 @@ public class SelectManager : MonoBehaviour
                 _selection = selection;
             }
         }
+        if (inventory.Count != 0)
+        {
+            bagManager.BagUsed();
+        }
+        else bagManager.BagEmpty();
+        if (Input.GetKeyDown(KeyCode.H)) Debug.Log(inventory.Count);  //Borrar cuando ya este todo implementado. esto es solo de verificacion
+    }
+
+    public void AddObject(GameObject gObject)
+    {
+        if(inventory.Count <3) inventory.Add(gObject);
+    }
+    public GameObject[] TemporaryInventory()
+    {
+        GameObject[] tempInventory = inventory.ToArray();
+        return tempInventory;
     }
 }
