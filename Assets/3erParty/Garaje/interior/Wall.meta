@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 3224dfc211bdb8647af47b30959732aa
-=======
-<<<<<<< Updated upstream:Assets/Prefabs.meta
-guid: f44702758c1af1c4c95142dc68b8c25d
-=======
-guid: 3224dfc211bdb8647af47b30959732aa
->>>>>>> Stashed changes:Assets/3erParty/Garaje/interior/Wall.meta
->>>>>>> Stashed changes
+guid: fedfad348f5e9e34bb80e2b053d7e7a1
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
