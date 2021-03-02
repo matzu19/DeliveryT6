@@ -30,7 +30,7 @@ public class InventoryManager : MonoBehaviour
                 {
                     image[i].sprite = resources[3];
                 }
-                else if (bag[i].name == "box")
+                else if (bag[i].name == "Box")
                 {
                     image[i].sprite = resources[4];
                 }
