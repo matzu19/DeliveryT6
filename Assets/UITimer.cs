@@ -20,6 +20,7 @@ public class UITimer : MonoBehaviour
 			int seconds = Mathf.FloorToInt(timer % 60F);
 			int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);
 			timerMinutes.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+		if(timer <= 0) { Application.Quit(); }
 	}
 
 }
