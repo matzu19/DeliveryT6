@@ -39,8 +39,8 @@ public class GameControl : MonoBehaviour
             pictures[12].rotation.z == 0 &&
             pictures[13].rotation.z == 0 &&
             pictures[14].rotation.z == 0 &&
-            pictures[15].rotation.z == 0 &&
-            pictures[16].rotation.z == 0)
+            pictures[15].rotation.z == 0)
+            
            
 
         {
