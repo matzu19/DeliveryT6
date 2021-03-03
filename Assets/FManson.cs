@@ -10,21 +10,27 @@ public class FManson : MonoBehaviour
     {
         PressE.SetActive(false);
     }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
+        {
+            Debug.Log("Puzzle");
+        }
+    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("FAMILYM");
         PressE.SetActive(true);
+
     }
     private void OnTriggerExit(Collider other)
     {
         
         PressE.SetActive(false);
     }
+
 
 }
