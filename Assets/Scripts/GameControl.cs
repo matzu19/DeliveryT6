@@ -9,7 +9,7 @@ public class GameControl : MonoBehaviour
 
     [SerializeField]
     private GameObject winText, camara, character;
-    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.MouseLook mouseLocking;
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     public static bool youWin;
 
@@ -46,7 +46,7 @@ public class GameControl : MonoBehaviour
         {
             youWin = true;
             winText.SetActive(true);
-            mouseLocking.SetCursorLock(true);
+            mouseLocking.m_MouseLook.SetCursorLock(true);
             character.SetActive(true);
             Destroy(camara);
 

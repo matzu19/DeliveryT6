@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &62984659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1883,7 +1883,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331693807}
   - component: {fileID: 331693806}
-  - component: {fileID: 331693805}
   - component: {fileID: 331693804}
   m_Layer: 0
   m_Name: Camera
@@ -1923,14 +1922,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &331693805
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331693803}
-  m_Enabled: 1
 --- !u!20 &331693806
 Camera:
   m_ObjectHideFlags: 0
@@ -8276,15 +8267,7 @@ MonoBehaviour:
   winText: {fileID: 1267395365}
   camara: {fileID: 331693803}
   character: {fileID: 2029732594}
-  mouseLocking:
-    XSensitivity: 2
-    YSensitivity: 2
-    clampVerticalRotation: 1
-    MinimumX: -90
-    MaximumX: 90
-    smooth: 0
-    smoothTime: 5
-    lockCursor: 1
+  mouseLocking: {fileID: 0}
 --- !u!1 &1952676203
 GameObject:
   m_ObjectHideFlags: 0
