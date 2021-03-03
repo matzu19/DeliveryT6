@@ -858,6 +858,18 @@ MonoBehaviour:
   - {fileID: 180497222}
   - {fileID: 1237193350}
   - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
+  - {fileID: 1074267887}
   winText: {fileID: 1600106759}
 --- !u!4 &1485659227
 Transform:
