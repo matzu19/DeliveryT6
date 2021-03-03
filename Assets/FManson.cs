@@ -19,7 +19,8 @@ public class FManson : MonoBehaviour
             Debug.Log("Puzzle");
             canvasPuzzle.SetActive(true);
             camara.SetActive(true);
-           // mouseLocking.SetCursorLock(false);
+            mouseLocking.m_MouseLook.SetCursorLock(false);
+            PressE.SetActive(false);
         }
 
     }
