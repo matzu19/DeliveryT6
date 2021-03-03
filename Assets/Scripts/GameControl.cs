@@ -8,7 +8,7 @@ public class GameControl : MonoBehaviour
     private Transform[] pictures;
 
     [SerializeField]
-    private GameObject winText, camara, character;
+    private GameObject winText, camara, canvasGeneral, canvasPuzzle, character;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     public static bool youWin;
@@ -45,14 +45,18 @@ public class GameControl : MonoBehaviour
 
         {
             youWin = true;
-            winText.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(true);
             character.SetActive(true);
+            canvasGeneral.SetActive(true);
             Destroy(camara);
-
-
-
+            StartCoroutine("ApagarPuzzle");
         }
-
+    }
+    IEnumerator ApagarPuzzle()
+    {
+        winText.SetActive(true);
+        yield return new WaitForSeconds(3);
+        winText.SetActive(false);
+        canvasPuzzle.SetActive(false);
     }
 }

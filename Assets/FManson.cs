@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FManson : MonoBehaviour
 {
-    [SerializeField] private GameObject PressE, canvasPuzzle, camara;
+    [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, camara;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     void Awake()
@@ -18,6 +18,7 @@ public class FManson : MonoBehaviour
         {
             Debug.Log("Puzzle");
             canvasPuzzle.SetActive(true);
+            canvasGeneral.SetActive(false);
             camara.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(false);
             PressE.SetActive(false);
