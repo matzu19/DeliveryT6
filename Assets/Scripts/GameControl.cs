@@ -8,7 +8,8 @@ public class GameControl : MonoBehaviour
     private Transform[] pictures;
 
     [SerializeField]
-    private GameObject winText;
+    private GameObject winText, camara, character;
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     public static bool youWin;
 
@@ -38,13 +39,18 @@ public class GameControl : MonoBehaviour
             pictures[12].rotation.z == 0 &&
             pictures[13].rotation.z == 0 &&
             pictures[14].rotation.z == 0 &&
-            pictures[15].rotation.z == 0 &&
-            pictures[16].rotation.z == 0)
+            pictures[15].rotation.z == 0)
+            
            
 
         {
             youWin = true;
             winText.SetActive(true);
+            mouseLocking.m_MouseLook.SetCursorLock(true);
+            character.SetActive(true);
+            Destroy(camara);
+
+
 
         }
 

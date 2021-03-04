@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class FManson : MonoBehaviour
 {
-    public GameObject PressE;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject PressE, canvasPuzzle, camara;
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
+
+    void Awake()
     {
         PressE.SetActive(false);
+        canvasPuzzle.SetActive(false);
     }
     private void Update()
     {
         if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
         {
             Debug.Log("Puzzle");
+            canvasPuzzle.SetActive(true);
+            camara.SetActive(true);
+            mouseLocking.m_MouseLook.SetCursorLock(false);
+            PressE.SetActive(false);
         }
+
     }
 
     // Update is called once per frame
