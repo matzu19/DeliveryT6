@@ -8,11 +8,10 @@ public class GameControl : MonoBehaviour
     private Transform[] pictures;
 
     [SerializeField]
-<<<<<<< HEAD
-    private GameObject winText, camara, character;
-=======
-    private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, character;
->>>>>>> Santiago
+   // private GameObject winText, camara, character; //Cambio de head
+
+    private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, character; //cambio de Santiago
+
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     public static bool youWin;
@@ -57,9 +56,7 @@ public class GameControl : MonoBehaviour
 
 
         }
-<<<<<<< HEAD
 
-=======
     }
     IEnumerator ApagarPuzzle()
     {
@@ -68,6 +65,5 @@ public class GameControl : MonoBehaviour
         winText.SetActive(false);
         canvasPuzzle.SetActive(false);
         reticula.SetActive(true);
->>>>>>> Santiago
     }
 }
