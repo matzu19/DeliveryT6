@@ -5575,6 +5575,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PressE: {fileID: 833101338}
   canvasPuzzle: {fileID: 1513348946}
+<<<<<<< HEAD
+=======
+  canvasGeneral: {fileID: 216073863}
+  reticula: {fileID: 1557274977}
+>>>>>>> Santiago
   camara: {fileID: 331693803}
   mouseLocking: {fileID: 2029732596}
 --- !u!65 &1212827835
@@ -5997,7 +6002,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7520,7 +7525,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557274977}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -8671,6 +8676,12 @@ MonoBehaviour:
   - {fileID: 709155894}
   winText: {fileID: 1267395365}
   camara: {fileID: 331693803}
+<<<<<<< HEAD
+=======
+  canvasGeneral: {fileID: 216073863}
+  reticula: {fileID: 1557274977}
+  canvasPuzzle: {fileID: 1513348946}
+>>>>>>> Santiago
   character: {fileID: 2029732594}
   mouseLocking: {fileID: 0}
 --- !u!1 &1952676203
