@@ -5575,6 +5575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PressE: {fileID: 833101338}
   canvasPuzzle: {fileID: 1513348946}
+  canvasGeneral: {fileID: 216073863}
   camara: {fileID: 331693803}
   mouseLocking: {fileID: 2029732596}
 --- !u!65 &1212827835
@@ -8671,8 +8672,10 @@ MonoBehaviour:
   - {fileID: 709155894}
   winText: {fileID: 1267395365}
   camara: {fileID: 331693803}
+  canvasGeneral: {fileID: 216073863}
+  canvasPuzzle: {fileID: 1513348946}
   character: {fileID: 2029732594}
-  mouseLocking: {fileID: 0}
+  mouseLocking: {fileID: 2029732596}
 --- !u!1 &1952676203
 GameObject:
   m_ObjectHideFlags: 0
