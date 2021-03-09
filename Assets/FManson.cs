@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FManson : MonoBehaviour
 {
-<<<<<<< HEAD
-    [SerializeField] private GameObject PressE, canvasPuzzle, camara;
-=======
-    [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara;
->>>>>>> Santiago
+
+ //   [SerializeField] private GameObject PressE, canvasPuzzle, camara; //HEad
+
+    [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara; //Santiago
+
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
 
     void Awake()
@@ -22,11 +22,9 @@ public class FManson : MonoBehaviour
         {
             Debug.Log("Puzzle");
             canvasPuzzle.SetActive(true);
-<<<<<<< HEAD
-=======
+            /*
             canvasGeneral.SetActive(false);
-            reticula.SetActive(false);
->>>>>>> Santiago
+            reticula.SetActive(false);*///Santiago
             camara.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(false);
             PressE.SetActive(false);
