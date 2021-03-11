@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SelectManager : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable";
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Material defaultMaterial;
+    [SerializeField] private string selectableTag = "Selectable", interactTag = "Interactive", lockerTag = "Locker";
+    [SerializeField] private Color highlightedColor, defaultColor;
+    [SerializeField] private Material highlightedMaterial, defaultMaterial;
     //private PickableManager pickable;
     [SerializeField] private InventoryManager bagManager;
+    [SerializeField] private LockOpener unlock;
     private List<GameObject> inventory;
 
 
@@ -21,8 +22,19 @@ public class SelectManager : MonoBehaviour
     {
         if(_selection != null)
         {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
+            if (_selection.CompareTag(interactTag))//Interactive
+            {
+                _selection.GetComponent<SpriteRenderer>().color = defaultColor;
+                _selection.GetComponent<FManson>().IsNotInteractive();
+            }
+            if (_selection.CompareTag(selectableTag))//Selectable
+            {
+                _selection.GetComponent<Renderer>().material = defaultMaterial;
+            }
+            if (_selection.CompareTag(lockerTag))//Locker
+            {
+                _selection.GetComponent<Renderer>().material = defaultMaterial;
+            }
             _selection = null;
         }
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -30,13 +42,37 @@ public class SelectManager : MonoBehaviour
         if(Physics.Raycast(ray, out hit, 1.5f))
         {
             var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+            defaultMaterial = selection.GetComponent<Renderer>().material;
+            if (selection.CompareTag(selectableTag)) //Recogible
             {
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null)
                 {
-                    selectionRenderer.material = highlightMaterial;
+                    selectionRenderer.material = highlightedMaterial;
                     if(Input.GetButton("Fire1")) selection.GetComponent<PickableManager>().IsPickable();
+                }
+                _selection = selection;
+            }
+            if (selection.CompareTag(lockerTag)) //Locker
+            {
+                var selectionRenderer = selection.GetComponent<Renderer>();
+                if (selectionRenderer != null)
+                {
+                    selectionRenderer.material = highlightedMaterial;
+                    if (Input.GetButton("Fire1"))
+                    {
+                        unlock.VerifyKey(selection.gameObject);
+                    }
+                }
+                _selection = selection;
+            }
+            if (selection.CompareTag(interactTag)) //Interactuable
+            {
+                var selectionRenderer = selection.GetComponent<SpriteRenderer>();
+                selection.GetComponent<FManson>().IsInteractive();
+                if (selectionRenderer != null)
+                {
+                    selectionRenderer.color = highlightedColor;
                 }
                 _selection = selection;
             }
@@ -46,7 +82,6 @@ public class SelectManager : MonoBehaviour
             bagManager.BagUsed();
         }
         else bagManager.BagEmpty();
-        if (Input.GetKeyDown(KeyCode.H)) Debug.Log(inventory.Count);  //Borrar cuando ya este todo implementado. esto es solo de verificacion
     }
 
     public void AddObject(GameObject gObject)
