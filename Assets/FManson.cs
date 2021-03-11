@@ -6,38 +6,34 @@ public class FManson : MonoBehaviour
 {
     [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
+    [SerializeField] private Collider bCollider;
 
     void Awake()
     {
         PressE.SetActive(false);
         canvasPuzzle.SetActive(false);
+        bCollider = GetComponent<Collider>();
     }
     private void Update()
     {
         if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
         {
-            Debug.Log("Puzzle");
             canvasPuzzle.SetActive(true);
             canvasGeneral.SetActive(false);
             reticula.SetActive(false);
             camara.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(false);
             PressE.SetActive(false);
+            bCollider.enabled = !bCollider.enabled;
         }
 
     }
-
-    // Update is called once per frame
-
-    private void OnTriggerEnter(Collider other)
+    public void IsInteractive()
     {
-        Debug.Log("FAMILYM");
-        PressE.SetActive(true);
-
+        PressE.SetActive(true); 
     }
-    private void OnTriggerExit(Collider other)
+    public void IsNotInteractive()
     {
-        
         PressE.SetActive(false);
     }
 

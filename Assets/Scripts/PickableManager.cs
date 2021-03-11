@@ -7,7 +7,6 @@ public class PickableManager : MonoBehaviour
 {
     [SerializeField] private bool pickable;
     [SerializeField] private SelectManager selector;
-    [SerializeField] private Sprite sprite;
 
     public void IsPickable()
     {
