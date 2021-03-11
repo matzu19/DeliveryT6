@@ -20,19 +20,23 @@ public class InventoryManager : MonoBehaviour
             {
                 if(bag[i].name == "Cube")
                 {
-                    image[i].sprite = resources[1]; 
+                    image[i].sprite = resources[1];
+                    image[i].color = new Color(1f, 1f, 1f, 1f); 
                 }
                 else if (bag[i].name == "Sphere")
                 {
                     image[i].sprite = resources[2];
+                    image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
                 else if (bag[i].name == "Triangle")
                 {
                     image[i].sprite = resources[3];
+                    image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
                 else if (bag[i].name == "Box")
                 {
                     image[i].sprite = resources[4];
+                    image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
             }
         }
@@ -43,8 +47,8 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log(bag[i].name);
             }
         }
-    }
 
+    }
     public void BagUsed()
     {
         bagInUse = true;
@@ -53,5 +57,8 @@ public class InventoryManager : MonoBehaviour
     {
         bagInUse = false;
     }
-
+    public GameObject Item(int x)
+    {
+        return bag[x];
+    }
 }

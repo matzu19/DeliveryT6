@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
-  - selectable
   - Selectable
+  - Interactive
+  - Locker
   layers:
   - Default
   - TransparentFX
