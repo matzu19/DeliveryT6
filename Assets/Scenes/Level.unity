@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502735, g: 0.3713942, b: 0.4960114, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502738, g: 0.3713941, b: 0.49601358, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -447,6 +447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerMinutes: {fileID: 304159297}
   timer: 0
+  colorMid: {r: 0, g: 0, b: 0, a: 0}
+  ColorFinal: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &37449856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7097,7 +7099,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1128999843324578, guid: 373095bd3f7ddb948bce9f5ece6ef02d, type: 3}
       propertyPath: m_Name
-      value: table
+      value: f
       objectReference: {fileID: 0}
     - target: {fileID: 4621928493842378, guid: 373095bd3f7ddb948bce9f5ece6ef02d, type: 3}
       propertyPath: m_RootOrder
@@ -7806,6 +7808,12 @@ MonoBehaviour:
   - {fileID: 373524647}
   - {fileID: 1958018153}
   winText: {fileID: 1866661226}
+  camara: {fileID: 0}
+  canvasGeneral: {fileID: 0}
+  reticula: {fileID: 0}
+  canvasPuzzle: {fileID: 0}
+  character: {fileID: 0}
+  mouseLocking: {fileID: 0}
 --- !u!4 &2135158226
 Transform:
   m_ObjectHideFlags: 0
