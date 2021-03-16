@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8263202573053335512
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d972b58afa03fd3449aab7b57f524c5e
+  m_EffectName: Attenuation
+  m_MixLevel: b8be45a69671e5542aee3d019dd0affa
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-6206789008663371238
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -14,6 +28,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-4420680753776541613
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bulbLight
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 021c72b5eba56f94b896d87962790a30
+  m_Children: []
+  m_Volume: 777073be58566314090ff6f366f23352
+  m_Pitch: a69a5f51a6a7d7e4b9596c67c8e41a0f
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -8263202573053335512}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -35,6 +68,7 @@ AudioMixerController:
     - 5ebd7bdfe68ba6849b081e6b4790e7ca
     - 3aa5c1885356b5c4ea2cebc91639edc5
     - 90fbe7973b442a34b92a49552c1d27ee
+    - 021c72b5eba56f94b896d87962790a30
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -50,6 +84,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 6239065613705756153}
   - {fileID: 1308422402454358159}
+  - {fileID: -4420680753776541613}
   m_Volume: 4522dbecfc817dd48b71135f29249146
   m_Pitch: b0de4a70a2c2b9844a22bcc08ec3d249
   m_Send: 00000000000000000000000000000000
@@ -83,7 +118,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 04d00e9b27f3b8245aace8fec607522d
   m_FloatValues:
-    2b88c3f970ed80947a88f9f76b07eea4: 0.04171297
+    2b88c3f970ed80947a88f9f76b07eea4: -9.833291
+    c56de58e18e68874086f88a71db4069c: -14.816608
+    777073be58566314090ff6f366f23352: -44.307564
   m_TransitionOverrides: {}
 --- !u!243 &1308422402454358159
 AudioMixerGroupController:
