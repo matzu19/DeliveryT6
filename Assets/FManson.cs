@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FManson : MonoBehaviour
 {
-
- //   [SerializeField] private GameObject PressE, canvasPuzzle, camara; //HEad
-
     [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara; //Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     [SerializeField] private Collider bCollider;
@@ -21,6 +18,7 @@ public class FManson : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
         {
+            Debug.Log(gameObject.name);
             canvasPuzzle.SetActive(true);
             canvasGeneral.SetActive(false);
             reticula.SetActive(false);
