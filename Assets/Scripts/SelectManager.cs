@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SelectManager : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable", interactTag = "Interactive", lockerTag = "Locker";
+    [SerializeField] private string selectableTag = "Selectable", interactTag = "Interactive";
+    private string lockerTag = "Locker";
     [SerializeField] private Color highlightedColor, defaultColor;
     [SerializeField] private Material highlightedMaterial, defaultMaterial;
     //private PickableManager pickable;
@@ -69,7 +70,8 @@ public class SelectManager : MonoBehaviour
             if (selection.CompareTag(interactTag)) //Interactuable
             {
                 var selectionRenderer = selection.GetComponent<SpriteRenderer>();
-                selection.GetComponent<FManson>().IsInteractive();
+                Debug.Log(selection.gameObject.name);
+                selection.gameObject.GetComponent<FManson>().IsInteractive();
                 if (selectionRenderer != null)
                 {
                     selectionRenderer.color = highlightedColor;
