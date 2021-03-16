@@ -6,21 +6,45 @@ public class CarDriveThru : MonoBehaviour
 {
     [SerializeField] private AudioSource carAudio;
     [SerializeField] private float min, max;
-    private float time;
-
-    void Update()
+   // private float time = 0;
+    float n;
+    private void Start()
     {
-        time += Time.deltaTime;
-        if(time >= RandomGenerator())
+        n = 5f;    
+        StartCoroutine(waitTime(n));
+
+    }
+    
+    void Update()
+    {/*
+        time++;
+        if(time >= n)
         {
-            carAudio.Play();
-            time = 0f;
-            RandomGenerator();
-        }
+            SoundPlay();
+        }*/
+
+    }
+    void SoundPlay()
+    {
+       // time = 0f;
+        carAudio.Play();  
+        RandomGenerator();
     }
     private float RandomGenerator()
+    {   
+        float r = Random.Range(min, max);
+        Debug.Log("el numeor aleatorio es " + r);
+        return r;
+       
+    }
+    IEnumerator waitTime(float n)
     {
-        return Random.Range(min, max);
+        while (true)
+        {
+            yield return new WaitForSeconds(n);
+            SoundPlay();         
+            n=RandomGenerator();
+        }
     }
 
 }
