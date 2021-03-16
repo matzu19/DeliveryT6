@@ -8,10 +8,8 @@ public class RotaciónEscenario : MonoBehaviour
     //Pensado para ponerse en la cámara del Main menu
 
     public float VelRotacion;
-    void Start()
-    {
-        
-    }
+ 
+   
 
     // Update is called once per frame
       void Update()
