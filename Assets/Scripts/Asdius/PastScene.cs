@@ -7,6 +7,6 @@ public class PastScene : MonoBehaviour
     private void OnEnable()
     {
         print("Pasó de escena");
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Level 2");
     }
 }
