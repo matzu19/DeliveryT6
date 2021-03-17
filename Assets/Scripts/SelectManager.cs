@@ -71,7 +71,7 @@ public class SelectManager : MonoBehaviour
             {
                 var selectionRenderer = selection.GetComponent<SpriteRenderer>();
                 Debug.Log(selection.gameObject.name);
-                selection.gameObject.GetComponent<FManson>().IsInteractive();
+                selection.gameObject.GetComponent<FManson>().IsInteractive(selection.gameObject.name);
                 if (selectionRenderer != null)
                 {
                     selectionRenderer.color = highlightedColor;
