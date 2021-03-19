@@ -7,6 +7,7 @@ public class FManson : MonoBehaviour
     [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara; //Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     [SerializeField] private Collider bCollider;
+    private string nameRef;
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class FManson : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
+        if (Input.GetKey(KeyCode.E) && PressE.activeInHierarchy && this.gameObject.name == nameRef)
         {
             Debug.Log(gameObject.name);
             canvasPuzzle.SetActive(true);
@@ -29,8 +30,9 @@ public class FManson : MonoBehaviour
         }
 
     }
-    public void IsInteractive()
+    public void IsInteractive(string name)
     {
+        nameRef = name;
         PressE.SetActive(true); 
     }
     public void IsNotInteractive()
