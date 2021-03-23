@@ -7,63 +7,38 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Transform[] pictures;
 
-    [SerializeField]
-   // private GameObject winText, camara, character; //Cambio de head
-
-    private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, character; //cambio de Santiago
-
+    [SerializeField] private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle; //cambio de Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
-
     public static bool youWin;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         winText.SetActive(false);
         youWin = false;
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (pictures[0].rotation.z == 0 &&
-            pictures[1].rotation.z == 0 &&
-            pictures[2].rotation.z == 0 &&
-            pictures[3].rotation.z == 0&&
-            pictures[4].rotation.z == 0 &&
-            pictures[5].rotation.z == 0 &&
-            pictures[6].rotation.z == 0 &&
-            pictures[7].rotation.z == 0 &&
-            pictures[8].rotation.z == 0 &&
-            pictures[9].rotation.z == 0 &&
-            pictures[10].rotation.z == 0 &&
-            pictures[11].rotation.z == 0 &&
-            pictures[12].rotation.z == 0 &&
-            pictures[13].rotation.z == 0 &&
-            pictures[14].rotation.z == 0 &&
-            pictures[15].rotation.z == 0)
-            
-           
-
+        if (pictures[0].rotation.z == 0 && pictures[1].rotation.z == 0 && pictures[2].rotation.z == 0 && pictures[3].rotation.z == 0 && pictures[4].rotation.z == 0 &&
+            pictures[5].rotation.z == 0 && pictures[6].rotation.z == 0 && pictures[7].rotation.z == 0 && pictures[8].rotation.z == 0 && pictures[9].rotation.z == 0 &&
+            pictures[10].rotation.z == 0 && pictures[11].rotation.z == 0 && pictures[12].rotation.z == 0 && pictures[13].rotation.z == 0 && pictures[14].rotation.z == 0 &&
+            pictures[15].rotation.z == 0)     
         {
             youWin = true;
             winText.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(true);
-            character.SetActive(true);
+            mouseLocking.m_WalkSpeed = 5;
             Destroy(camara);
-
-
-
+            StartCoroutine(ApagarPuzzle());
         }
 
     }
     IEnumerator ApagarPuzzle()
     {
-        winText.SetActive(true);
         yield return new WaitForSeconds(3);
         winText.SetActive(false);
         canvasPuzzle.SetActive(false);
+        canvasGeneral.SetActive(true);
         reticula.SetActive(true);
     }
 }
