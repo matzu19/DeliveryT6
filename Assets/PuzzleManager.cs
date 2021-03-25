@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Computadora computadora;
     [SerializeField] private Interruptores interruptores;
 
-    private void Update()
+    private void FixedUpdate()
     {
         switch (puzzleNameIs)
         {
@@ -36,7 +36,6 @@ public class PuzzleManager : MonoBehaviour
     }
     public string PuzzleIdentifier(string puzzleName)
     {
-        
         return puzzleNameIs = puzzleName;
     }
 }

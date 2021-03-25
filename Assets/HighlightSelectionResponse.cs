@@ -18,13 +18,13 @@ public class HighlightSelectionResponse : MonoBehaviour, ISelectionResponse
         }
     }
 
-    public void OnSelect(Transform selection)
+    public void OnSelect(Transform selection)//When selected
     {
         var selectionMaterial = selection.GetComponent<Renderer>();
         if (selectionMaterial != null)
         {
-            selectionMaterial.material = highlightMaterial;
-            puzzle.PuzzleIdentifier(selection.gameObject.name);
+            selectionMaterial.material = highlightMaterial;//Color change
+            puzzle.PuzzleIdentifier(selection.gameObject.name);//Call indentifier method
         }
     }
 }

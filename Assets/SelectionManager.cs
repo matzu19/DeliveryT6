@@ -7,7 +7,6 @@ public class SelectionManager : MonoBehaviour
     private string selectableTag = "Selectable";
     private ISelectionResponse _selectionResponse;
     private HighlightSelectionResponse highlight;
-    private Material defaultMaterial;
     private Transform _selection;
     
 
@@ -19,7 +18,7 @@ public class SelectionManager : MonoBehaviour
 
     private void Update()
     {
-        if (_selection != null)
+        if (_selection != null)//Deseleccion
         {
             _selectionResponse.OnDeselect(_selection);//Object in Deselection
         }
@@ -34,7 +33,7 @@ public class SelectionManager : MonoBehaviour
             if (selection.CompareTag(selectableTag)) _selection = selection;
         }//Raycast Region
 
-        if (_selection != null)
+        if (_selection != null)//Seleccion
         {
             _selectionResponse.OnSelect(_selection);//Object in selection
         }

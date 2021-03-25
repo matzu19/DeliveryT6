@@ -26,7 +26,7 @@ public class SelectManager : MonoBehaviour
             if (_selection.CompareTag(interactTag))//Interactive
             {
                 _selection.GetComponent<SpriteRenderer>().color = defaultColor;
-                _selection.GetComponent<FManson>().IsNotInteractive();
+               // _selection.GetComponent<FManson>().IsNotInteractive();
             }
             if (_selection.CompareTag(selectableTag))//Selectable
             {
@@ -71,7 +71,7 @@ public class SelectManager : MonoBehaviour
             {
                 var selectionRenderer = selection.GetComponent<SpriteRenderer>();
                 Debug.Log(selection.gameObject.name);
-                selection.gameObject.GetComponent<FManson>().IsInteractive(selection.gameObject.name);
+               // selection.gameObject.GetComponent<FManson>().IsInteractive(selection.gameObject.name);
                 if (selectionRenderer != null)
                 {
                     selectionRenderer.color = highlightedColor;

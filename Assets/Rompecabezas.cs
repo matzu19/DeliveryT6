@@ -2,30 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class Rompecabezas : MonoBehaviour
+public class Rompecabezas : MonoBehaviour
 {
-    [SerializeField] private GameObject PressE, reticula, canvasPuzzle, canvasGeneral, camara; //Santiago
+    [SerializeField] private GameObject PressE, reticula, canvasPuzzle, canvasGeneral, camara;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     [SerializeField] private Collider bCollider;
     private bool puzzleActivo;
-    private void Update()
+    private void FixedUpdate()
     {
         if (puzzleActivo)
         {
             PressE.SetActive(true);
-            reticula.SetActive(false);
-            if(Input.GetKey(KeyCode.E) && PressE.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.E) && PressE.activeInHierarchy)
             {
-                canvasPuzzle.SetActive(true);
-                canvasGeneral.SetActive(false);
-                camara.SetActive(true);
-                mouseLocking.m_MouseLook.SetCursorLock(false);
-                mouseLocking.m_WalkSpeed = 0;
-                PressE.SetActive(false);
-                bCollider.enabled = !bCollider.enabled;
+                PuzzleActivated();
             }
         }
-
     }
     public bool ActivarPuzzle()
     {
@@ -34,7 +26,17 @@ public partial class Rompecabezas : MonoBehaviour
     public bool DesactivarPuzzle()
     {
         PressE.SetActive(false);
-        reticula.SetActive(true);
         return puzzleActivo = false;
+    }
+    public void PuzzleActivated()
+    {
+        bCollider.enabled = !bCollider.enabled;
+        canvasPuzzle.SetActive(true);
+        canvasGeneral.SetActive(false);
+        camara.SetActive(true);
+        mouseLocking.m_MouseLook.SetCursorLock(false);
+        mouseLocking.m_WalkSpeed = 0;
+        PressE.SetActive(false);
+        reticula.SetActive(false);
     }
 }
