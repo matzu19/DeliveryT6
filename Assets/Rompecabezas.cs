@@ -39,4 +39,13 @@ public class Rompecabezas : MonoBehaviour
         PressE.SetActive(false);
         reticula.SetActive(false);
     }
+    public void PuzzleDesactivated()
+    {
+        bCollider.enabled = true;
+        canvasPuzzle.SetActive(false);
+        canvasGeneral.SetActive(true);
+        camara.SetActive(false);
+        mouseLocking.m_MouseLook.SetCursorLock(true);
+        mouseLocking.m_WalkSpeed = 5;
+    }
 }

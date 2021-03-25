@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class LockControl : MonoBehaviour
+public class LockControl :  MonoBehaviour
 {
+    [SerializeField] private Unlock puzzleDone;
     [SerializeField] private string code;
     [SerializeField] private TMP_Text codeScreen;
     private Playsound click;
@@ -113,9 +114,11 @@ public class LockControl : MonoBehaviour
     {
         if (codeScreen.text.Length == 4 && codeScreen.text == "1934" && codeScreen.color != Color.green)
         {
-            click.Clicky();
+            click.ClickyDone();
             codeScreen.color = Color.green;
+            StartCoroutine(CodigoCorrecto());
         }
+        else StartCoroutine(ErrorDeCodigo());
     }
     public void PressCorrect()
     {
@@ -125,5 +128,22 @@ public class LockControl : MonoBehaviour
             code = codeScreen.text.Substring(0, code.Length - 1);
         }
         else code = null;
+    }
+
+    IEnumerator CodigoCorrecto()
+    {
+        yield return new WaitForSeconds(1f);
+        puzzleDone.UnlockedPuzzle();
+
+    }
+    IEnumerator ErrorDeCodigo()
+    {
+        code4less = false;
+        codeScreen.color = Color.red;
+        yield return new WaitForSeconds(1f);
+        code = code.Remove(0);
+        codeScreen.color = Color.white;
+        code4less = true;
+
     }
 }

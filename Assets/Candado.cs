@@ -37,6 +37,15 @@ public class Candado : MonoBehaviour
         mouseLocking.m_MouseLook.SetCursorLock(false);
         mouseLocking.m_WalkSpeed = 0;
         PressE.SetActive(false);
-        Debug.Log("Leyo todo el metodo");
     }
+    public void PuzzleDesactivated()
+    {
+        bCollider.enabled = true;
+        canvasPuzzle.SetActive(false);
+        canvasGeneral.SetActive(true);
+        camara.SetActive(false);
+        mouseLocking.m_MouseLook.SetCursorLock(true);
+        mouseLocking.m_WalkSpeed = 5;
+    }
+
 }
