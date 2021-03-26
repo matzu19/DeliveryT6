@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Transform[] pictures;
 
-    [SerializeField] private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, puzzle1; //cambio de Santiago
+    [SerializeField] private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton; //cambio de Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     public static bool youWin;
 
@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
             pictures[15].rotation.z == 0)     
         {
             youWin = true;
+            boton.SetActive(false);
             winText.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(true);
             mouseLocking.m_WalkSpeed = 5;
