@@ -9,6 +9,6 @@ public class Lever : MonoBehaviour
 
     public void RecogerObjeto()
     {
-        recogible.AddObject("Gloves");
+        recogible.AddObject("Lever");
     }
 }

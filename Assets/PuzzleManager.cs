@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    private string puzzleNameIs;
+    [SerializeField] private string puzzleNameIs, sName;
     [SerializeField] private Rompecabezas rompecabezas;
     [SerializeField] private Candado candado;
     [SerializeField] private Computadora computadora;
     [SerializeField] private Interruptores interruptores;
-    [SerializeField] private Pickable recolectable;
+    [SerializeField] private LugarTornillos lugarTornillos;
+    [SerializeField] private LugarPalanca lugarPalanca;
+    [SerializeField] private InventoryManager InvMgr;
+    [SerializeField] private InventoryScroll InvScl;
+
 
     private void FixedUpdate()
     {
@@ -27,9 +31,26 @@ public class PuzzleManager : MonoBehaviour
             case "Interruptores":
                 interruptores.ActivarPuzzle();
                 break;
-            case "recolectable":
+            case "P Screw":
+                SelectedItem();
+                if (puzzleNameIs == "P " + sName)
+                {
+                    lugarTornillos.EsElLugarCorrecto();
+                }
+                break;
+            case "P Lever":
+                Debug.Log("entro en P lever");
+                SelectedItem();
+                Debug.Log("Leyo el selected");
+                if (puzzleNameIs == "P " + sName)
+                {
+                    Debug.Log("igualo");
+                    lugarPalanca.EsElLugarCorrecto();
+                }
                 break;
             case null:
+                lugarTornillos.NoEsElLugarCorrecto();
+                lugarPalanca.NoEsElLugarCorrecto();
                 rompecabezas.DesactivarPuzzle();
                 candado.DesactivarPuzzle();
                 computadora.DesactivarPuzzle();
@@ -40,5 +61,10 @@ public class PuzzleManager : MonoBehaviour
     public string PuzzleIdentifier(string puzzleName)
     {
         return puzzleNameIs = puzzleName;
+    }
+    public string SelectedItem()
+    {
+        sName = InvMgr.Item(InvScl.SelectorPosition());
+        return sName;
     }
 }

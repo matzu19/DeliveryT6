@@ -10,9 +10,9 @@ public class Pickable : MonoBehaviour
     [SerializeField] private InventoryManager bagManager;
     [SerializeField] private SelectionManager objetoSelecto;
 
-    [SerializeField] private Screw tornillo;
-    [SerializeField] private Gloves guantes;
-    [SerializeField] private Lever palanca;
+    private Screw tornillo;
+    private Gloves guantes;
+    private Lever palanca;
 
     private void Awake()
     {
@@ -39,12 +39,14 @@ public class Pickable : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         guantes.RecogerObjeto();
+                        objetoSelecto.DestruirObjeto();
                     }
                     break;
                 case "Lever":
                     if (Input.GetMouseButtonDown(0))
                     {
                         palanca.RecogerObjeto();
+                        objetoSelecto.DestruirObjeto();
                     }
                     break;
                 case null:
