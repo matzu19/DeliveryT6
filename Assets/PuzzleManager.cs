@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Candado candado;
     [SerializeField] private Computadora computadora;
     [SerializeField] private Interruptores interruptores;
+    [SerializeField] private Pickable recolectable;
 
     private void FixedUpdate()
     {
@@ -25,6 +26,8 @@ public class PuzzleManager : MonoBehaviour
                 break;
             case "Interruptores":
                 interruptores.ActivarPuzzle();
+                break;
+            case "recolectable":
                 break;
             case null:
                 rompecabezas.DesactivarPuzzle();

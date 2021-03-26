@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HighlightSelectionResponse : MonoBehaviour, ISelectionResponse
 {
-    [SerializeField]private PuzzleManager puzzle;
+    [SerializeField] private PuzzleManager puzzle;
+    [SerializeField] private Pickable recogible;
     [SerializeField] public Material highlightMaterial, defaultMaterial;
 
     public void OnDeselect(Transform selection)

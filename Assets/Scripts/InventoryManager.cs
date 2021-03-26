@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    private GameObject[] bag;
-    [SerializeField] private SelectManager selector;
+    private string[] bag;
+    [SerializeField] private Pickable arreglo;
     [SerializeField] private Image[] image;
     [SerializeField] private Sprite[] resources;
     private bool bagInUse;
@@ -15,27 +15,22 @@ public class InventoryManager : MonoBehaviour
     {
         if (bagInUse)
         {
-            bag = selector.TemporaryInventory();
+            bag = arreglo.TemporaryInventory();
             for(int i = 0; i < bag.Length; i++)
             {
-                if(bag[i].name == "Cube")
+                if(bag[i] == "Screw")
                 {
                     image[i].sprite = resources[1];
                     image[i].color = new Color(1f, 1f, 1f, 1f); 
                 }
-                else if (bag[i].name == "Sphere")
+                else if (bag[i] == "Gloves")
                 {
                     image[i].sprite = resources[2];
                     image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
-                else if (bag[i].name == "Triangle")
+                else if (bag[i] == "Lever")
                 {
                     image[i].sprite = resources[3];
-                    image[i].color = new Color(1f, 1f, 1f, 1f);
-                }
-                else if (bag[i].name == "Box")
-                {
-                    image[i].sprite = resources[4];
                     image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
             }
@@ -44,7 +39,7 @@ public class InventoryManager : MonoBehaviour
         {
             for (int i = 0; i <3; i++)
             {
-                Debug.Log(bag[i].name);
+                Debug.Log(bag[i]);
             }
         }
 
@@ -57,8 +52,8 @@ public class InventoryManager : MonoBehaviour
     {
         bagInUse = false;
     }
-    public GameObject Item(int x)
+   /* public string Item(int x)
     {
         return bag[x];
-    }
+    }*/
 }

@@ -9,10 +9,10 @@ public class LockOpener : MonoBehaviour
 
     public void VerifyKey(GameObject gameObject)
     {
-        if (gameObject.name == inventoryMgr.Item(inventoryPos.SelectorPosition()).name) 
+        /*if (gameObject.name == inventoryMgr.Item(inventoryPos.SelectorPosition())) 
         {
             Debug.Log("Puerta abierta");
             Destroy(gameObject);
-        }
+        }*/
     }
 }

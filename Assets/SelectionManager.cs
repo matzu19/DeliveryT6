@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class SelectionManager : MonoBehaviour
     private string selectableTag = "Selectable";
     private ISelectionResponse _selectionResponse;
     private HighlightSelectionResponse highlight;
+    [SerializeField] private GameObject fpscontroller;
     private Transform _selection;
     
 
@@ -37,5 +39,22 @@ public class SelectionManager : MonoBehaviour
         {
             _selectionResponse.OnSelect(_selection);//Object in selection
         }
+    }
+    public GameObject ObjetoSelecto()
+    {
+        try
+        {
+            GameObject objeto = _selection.gameObject;
+            return objeto;
+        }
+        catch (NullReferenceException ex)
+        {
+            return fpscontroller;
+        }
+
+    }
+    public void DestruirObjeto()
+    {
+        Destroy(_selection.gameObject);
     }
 }
