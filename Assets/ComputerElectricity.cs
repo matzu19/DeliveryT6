@@ -5,16 +5,20 @@ using UnityEngine;
 public class ComputerElectricity : MonoBehaviour , IAction
 {
     bool electricity;
-    public SwitchLever swithcOne, swithcTwo, swithcThree;
-/*
-    [SerializeField] private GameObject PressE, canvasPuzzle, canvasGeneral, reticula, camara; //Santiago
-    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;*/
+    [SerializeField]
+    private SwitchLever swithcOne, swithcTwo, swithcThree;
+    [SerializeField]
+    GameObject isOn, isOff;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         electricity = false;
-        
+        isOn.gameObject.SetActive(false);
+        isOff.gameObject.SetActive(false);
     }
     //Método que cambia la electricidad a encendida. Debe de ir a los scripts de las palancas y activar su variable electricidad
   
@@ -27,16 +31,37 @@ public class ComputerElectricity : MonoBehaviour , IAction
         {
             swithcOne.stream = true;
             swithcTwo.stream = true;
-            swithcThree.stream = true;
+            swithcThree.stream = true;         
+            StartCoroutine(waitTimeOn());   
             Debug.Log("Pc Stream Activated");
         }
         else
         {
             swithcOne.stream = false;
             swithcTwo.stream = false;
-            swithcThree.stream = false;
+            swithcThree.stream = false;         
+            StartCoroutine(waitTimeOff());            
             Debug.Log("Pc Stream deactivated");
 
         }
+    }
+
+    IEnumerator waitTimeOn()
+    {
+        if(isOff.activeInHierarchy == true)
+          isOff.gameObject.SetActive(false);
+        
+        isOn.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        isOn.gameObject.SetActive(false);
+    }
+    IEnumerator waitTimeOff()
+    {
+        if (isOn.activeInHierarchy == true)
+            isOn.gameObject.SetActive(false);
+
+        isOff.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        isOff.gameObject.SetActive(false);
     }
 }
