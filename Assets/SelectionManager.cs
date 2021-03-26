@@ -56,6 +56,6 @@ public class SelectionManager : MonoBehaviour
     }
     public void DestruirObjeto()
     {
-        Destroy(_selection.gameObject);
+        _selection.gameObject.SetActive(false);
     }
 }

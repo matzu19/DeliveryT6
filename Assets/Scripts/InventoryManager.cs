@@ -13,36 +13,45 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(bagInUse);
         if (bagInUse)
         {
             bag = arreglo.TemporaryInventory();
             for (int i = 0; i < bag.Length; i++)
             {
-                if(bag[i] == "Screw")
+                if (bag[i] == null)
                 {
-                    image[i].sprite = resources[1];
+                    image[i].sprite = null;
+                    image[i].color = new Color(1f, 1f, 1f, 0f);
+                }
+                else  if (bag[i] == "Screw")
+                {
+                    image[i].sprite = resources[0];
                     image[i].color = new Color(1f, 1f, 1f, 1f); 
                 }
                 else if (bag[i] == "Gloves")
                 {
-                    image[i].sprite = resources[2];
+                    image[i].sprite = resources[1];
                     image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
                 else if (bag[i] == "Lever")
                 {
-                    image[i].sprite = resources[3];
+                    image[i].sprite = resources[2];
                     image[i].color = new Color(1f, 1f, 1f, 1f);
                 }
             }
         }
-        if (Input.GetKey(KeyCode.G)) //Borrar cuando ya este todo implementado. esto es solo de verificacion
+        else
         {
-            for (int i = 0; i <3; i++)
+            for (int i = 0; i < bag.Length; i++)
             {
-                Debug.Log(bag[i]);
+                if (bag[i] == null)
+                {
+                    image[i].sprite = null;
+                    image[i].color = new Color(1f, 1f, 1f, 0f);
+                }
             }
         }
-
     }
     public void BagUsed()
     {
@@ -55,5 +64,27 @@ public class InventoryManager : MonoBehaviour
     public string Item(int x)
     {
         return bag[x];
+    }
+    public void BorrarPalanca()
+    {
+        for (int i = 0; i < bag.Length; i++)
+        {
+            if (bag[i] == "Lever")
+            {
+                image[i].sprite = null;
+                image[i].color = new Color(1f, 1f, 1f, 0f);
+            }  
+        }
+    }
+    public void BorrarTornillo()
+    {
+        for (int i = 0; i < bag.Length; i++)
+        {
+            if (bag[i] == "Screw")
+            {
+                image[i].sprite = null;
+                image[i].color = new Color(1f, 1f, 1f, 0f);
+            }
+        }
     }
 }

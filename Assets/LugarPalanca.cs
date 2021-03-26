@@ -5,7 +5,10 @@ using UnityEngine;
 public class LugarPalanca : MonoBehaviour
 {
     [SerializeField] private SelectionManager selected;
-    [SerializeField] private GameObject PressClick;
+    [SerializeField] private PuzzleManager item;
+    [SerializeField] private Pickable lista;
+    [SerializeField] private GameObject PressClick, palanca;
+    [SerializeField] private Collider holder;
 
     private bool EsElLugar;
 
@@ -16,7 +19,8 @@ public class LugarPalanca : MonoBehaviour
             PressClick.SetActive(true);
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Coloca Palanca");
+                StartCoroutine(ColocarPalanca());
+                holder.enabled = !holder.enabled;
             }
         }
     }
@@ -28,5 +32,12 @@ public class LugarPalanca : MonoBehaviour
     {
         PressClick.SetActive(false);
         return EsElLugar = false; ;
+    }
+    IEnumerator ColocarPalanca()
+    {
+        PressClick.SetActive(false);
+        palanca.SetActive(true);
+        lista.RemovePalanca(item.SelectedItem());
+        yield return null;
     }
 }

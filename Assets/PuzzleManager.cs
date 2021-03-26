@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private string puzzleNameIs, sName;
+    [SerializeField] private PalancaFinal pFinal;
     [SerializeField] private Rompecabezas rompecabezas;
     [SerializeField] private Candado candado;
     [SerializeField] private Computadora computadora;
@@ -13,7 +14,6 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private LugarPalanca lugarPalanca;
     [SerializeField] private InventoryManager InvMgr;
     [SerializeField] private InventoryScroll InvScl;
-
 
     private void FixedUpdate()
     {
@@ -39,18 +39,19 @@ public class PuzzleManager : MonoBehaviour
                 }
                 break;
             case "P Lever":
-                Debug.Log("entro en P lever");
                 SelectedItem();
-                Debug.Log("Leyo el selected");
                 if (puzzleNameIs == "P " + sName)
                 {
-                    Debug.Log("igualo");
                     lugarPalanca.EsElLugarCorrecto();
                 }
                 break;
+            case "Lever 2":
+                pFinal.ActivarPalancaFinal();
+                break;
             case null:
-                lugarTornillos.NoEsElLugarCorrecto();
+                pFinal.DesactivarPalancaFinal();
                 lugarPalanca.NoEsElLugarCorrecto();
+                lugarTornillos.NoEsElLugarCorrecto();
                 rompecabezas.DesactivarPuzzle();
                 candado.DesactivarPuzzle();
                 computadora.DesactivarPuzzle();
@@ -58,6 +59,8 @@ public class PuzzleManager : MonoBehaviour
                 break;
         }
     }
+
+
     public string PuzzleIdentifier(string puzzleName)
     {
         return puzzleNameIs = puzzleName;

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Pickable : MonoBehaviour
 {
     private List<string> inventory;
-    [SerializeField] private GameObject pickableObject;
+    [SerializeField] private GameObject pickableObject, PressClick, pApagar, pPrender;
     [SerializeField] private InventoryManager bagManager;
     [SerializeField] private SelectionManager objetoSelecto;
 
@@ -20,6 +20,7 @@ public class Pickable : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //Debug.Log(inventory.Count);
         pickableObject = objetoSelecto.ObjetoSelecto();
         if(pickableObject.name != null)
         {
@@ -29,27 +30,35 @@ public class Pickable : MonoBehaviour
             switch (pickableObject.name)
             {
                 case "Screw":
+                    PressClick.SetActive(true);
                     if (Input.GetMouseButtonDown(0))
                     {
                         tornillo.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
+                        PressClick.SetActive(false);
                     }
                     break;
                 case "Gloves":
+                    PressClick.SetActive(true);
                     if (Input.GetMouseButtonDown(0))
                     {
                         guantes.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
+                        PressClick.SetActive(false);
                     }
                     break;
                 case "Lever":
+                    PressClick.SetActive(true);
                     if (Input.GetMouseButtonDown(0))
                     {
                         palanca.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
+                        PressClick.SetActive(false);
                     }
                     break;
+
                 case null:
+                    PressClick.SetActive(false);
                     break;
             }
         }
@@ -63,6 +72,16 @@ public class Pickable : MonoBehaviour
     public void AddObject(string gObject)
     {
         inventory.Add(gObject);
+    }
+    public void RemovePalanca(string gObject)
+    {
+        inventory.Remove(gObject);
+        bagManager.BorrarPalanca();
+    }
+    public void RemoveTornillo(string gObject)
+    {
+        inventory.Remove(gObject);
+        bagManager.BorrarTornillo();
     }
     public string[] TemporaryInventory()
     {
