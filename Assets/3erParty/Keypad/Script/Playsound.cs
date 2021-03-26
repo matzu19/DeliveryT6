@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Playsound : MonoBehaviour 
 {
-	[SerializeField] private AudioSource normalClick, correctClick;
+	[SerializeField] private AudioSource normalClick, correctClick, MistakeClick;
 	public void Clicky()
 	{
 		normalClick.Play();
@@ -11,6 +11,10 @@ public class Playsound : MonoBehaviour
 	public void ClickyDone()
 	{
 		correctClick.Play();
+	}
+	public void ClickyFix()
+	{
+		MistakeClick.Play();
 	}
 
 }

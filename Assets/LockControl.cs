@@ -138,6 +138,7 @@ public class LockControl :  MonoBehaviour
     }
     IEnumerator ErrorDeCodigo()
     {
+        click.ClickyFix();
         code4less = false;
         codeScreen.color = Color.red;
         yield return new WaitForSeconds(1f);
