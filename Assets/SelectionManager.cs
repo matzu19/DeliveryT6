@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    private string selectableTag = "Selectable";
+    private string selectableTag = "Selectable", UnlockTag = "Lock";
     private ISelectionResponse _selectionResponse;
     private HighlightSelectionResponse highlight;
     [SerializeField] private GameObject fpscontroller;
-    private Transform _selection;
+    private Transform _selectionInteractive, _selectionUnlock;
     
 
     private void Awake()
@@ -20,11 +20,17 @@ public class SelectionManager : MonoBehaviour
 
     private void Update()
     {
-        if (_selection != null)//Deseleccion
+        if (_selectionInteractive != null)//Deseleccion
         {
-            _selectionResponse.OnDeselect(_selection);//Object in Deselection
+            _selectionResponse.OnDeselect(_selectionInteractive);//Object in Deselection
         }
-        _selection = null;
+        else if (_selectionUnlock != null)
+        {
+            _selectionResponse.OnDeselect(_selectionUnlock);//Object in selection
+        }
+
+        _selectionInteractive = null;
+        _selectionUnlock = null;
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -32,22 +38,27 @@ public class SelectionManager : MonoBehaviour
         {
             var selection = hit.transform;
             highlight.defaultMaterial = selection.GetComponent<Renderer>().material;
-            if (selection.CompareTag(selectableTag)) _selection = selection;
+            if (selection.CompareTag(selectableTag)) _selectionInteractive = selection;
+            else if (selection.CompareTag(UnlockTag)) _selectionUnlock = selection;
         }//Raycast Region
 
-        if (_selection != null)//Seleccion
+        if (_selectionInteractive != null)//Seleccion
         {
-            _selectionResponse.OnSelect(_selection);//Object in selection
+            _selectionResponse.OnSelect(_selectionInteractive);//Object in selection
+        }
+        else if(_selectionUnlock != null)
+        {
+            _selectionResponse.Unlock(_selectionUnlock);//Object in selection
         }
     }
     public GameObject ObjetoSelecto()
     {
         try
         {
-            GameObject objeto = _selection.gameObject;
+            GameObject objeto = _selectionInteractive.gameObject;
             return objeto;
         }
-        catch (NullReferenceException ex)
+        catch (NullReferenceException)
         {
             return fpscontroller;
         }
@@ -55,6 +66,6 @@ public class SelectionManager : MonoBehaviour
     }
     public void DestruirObjeto()
     {
-        Destroy(_selection.gameObject);
+        Destroy(_selectionInteractive.gameObject);
     }
 }

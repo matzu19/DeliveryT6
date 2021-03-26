@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    private string[] bag;
+    [SerializeField] private string[] bag;
     [SerializeField] private Pickable arreglo;
     [SerializeField] private Image[] image;
     [SerializeField] private Sprite[] resources;
@@ -16,7 +16,7 @@ public class InventoryManager : MonoBehaviour
         if (bagInUse)
         {
             bag = arreglo.TemporaryInventory();
-            for(int i = 0; i < bag.Length; i++)
+            for (int i = 0; i < bag.Length; i++)
             {
                 if(bag[i] == "Screw")
                 {
@@ -52,8 +52,8 @@ public class InventoryManager : MonoBehaviour
     {
         bagInUse = false;
     }
-   /* public string Item(int x)
+    public string Item(int x)
     {
         return bag[x];
-    }*/
+    }
 }
