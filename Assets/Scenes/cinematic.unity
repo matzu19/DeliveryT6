@@ -1495,6 +1495,27 @@ Transform:
   m_Father: {fileID: 1606938378}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &274710339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5041431398594380197, guid: 11bb505f04194454580d587614cf8e7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 368348997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &274710340
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274710339}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b2442df92e69c394cbf6950d3c76fd38, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &296138508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1619,6 +1640,46 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4727155273378640713, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4727155273378640713, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: -4727155273378640713, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4727155273378640713, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926552973675609988, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926552973675609988, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926552973675609988, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926552973675609988, guid: 11bb505f04194454580d587614cf8e7d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -3327,6 +3388,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 878306865}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &890766285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -684239451243441529, guid: 11bb505f04194454580d587614cf8e7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 368348997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &890766286
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890766285}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b2442df92e69c394cbf6950d3c76fd38, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &976624721 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f809aa1f165681246bf29f0a314f2e53,
@@ -8111,6 +8193,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5835b72fab4b03d4e80e1ca5c6d38e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &1893764783
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893764781}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b2442df92e69c394cbf6950d3c76fd38, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1904166338
 GameObject:
   m_ObjectHideFlags: 0
