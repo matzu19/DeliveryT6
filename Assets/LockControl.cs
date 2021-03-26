@@ -10,12 +10,14 @@ public class LockControl :  MonoBehaviour
     [SerializeField] private TMP_Text codeScreen;
     private Playsound click;
     private bool code4less;
+    [SerializeField] GameObject cajon;
 
     private void Awake()
     {
         click = GetComponent<Playsound>();
         code4less = true;
     }
+    #region botones codigo
     private void Update()
     {
         if (code.Length < 4)
@@ -110,12 +112,14 @@ public class LockControl :  MonoBehaviour
             code += "0";
         }
     }
+    #endregion botones codigo
     public void PressCheck()
     {
         if (codeScreen.text.Length == 4 && codeScreen.text == "1934" && codeScreen.color != Color.green)
         {
             click.ClickyDone();
             codeScreen.color = Color.green;
+            cajon.GetComponent<Animation>().Play();
             StartCoroutine(CodigoCorrecto());
         }
         else StartCoroutine(ErrorDeCodigo());

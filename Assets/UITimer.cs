@@ -9,10 +9,13 @@ public class UITimer : MonoBehaviour
 	[SerializeField] TextMeshProUGUI timerMinutes;
 	[SerializeField] private float timer;
 	[SerializeField] private Color colorMid, ColorFinal;
+    [SerializeField] GameObject canvaLose;
 
     private void Awake()
     {
-		timer = 600f;
+        canvaLose.SetActive(false);
+
+        timer = 600f;
     }
     void Update()
 	{
@@ -23,7 +26,7 @@ public class UITimer : MonoBehaviour
 		timerMinutes.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 		if (timer <= 400f && timer > 200f) timerMinutes.color = colorMid;
 		else if (timer <= 200f && timer > 0f) timerMinutes.color = ColorFinal;
-		if (timer <= 0) { Application.Quit(); }
+		if (timer <= 0) { canvaLose.SetActive(true); }
 	}
 
 }

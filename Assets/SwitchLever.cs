@@ -7,6 +7,8 @@ public class SwitchLever : MonoBehaviour, IAction
     [SerializeField]
     private int n;
     public bool stream;
+    public bool win;
+
     
     void condicion1()
     {
@@ -25,6 +27,12 @@ public class SwitchLever : MonoBehaviour, IAction
 
     public void Activate()
     {
+        if (stream)
+        {
+            this.transform.Rotate(0f, 0f, -80f);
+            win = true;
+        }
+        
         Debug.Log("el estado de la corriente es " + stream);
     }
 }
