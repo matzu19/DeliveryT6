@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &840737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &36742666
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &88943309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,7 +1225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f84ac0e04091f94ab61575c94b75ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selector: {fileID: 551873293}
+  bag: []
+  arreglo: {fileID: 0}
   image:
   - {fileID: 1749187821}
   - {fileID: 1854739527}
@@ -1446,6 +1452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &107232790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1976,6 +1985,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &202478100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,6 +2966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &264343268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3076,6 +3089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &267452644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3396,6 +3410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &287624873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3700,6 +3717,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &307671342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,6 +4082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &321683146
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4262,6 +4283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &338347798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4737,6 +4761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &475088421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4859,6 +4884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &480551976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4981,6 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &511686978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5521,6 +5548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &566255616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5820,6 +5848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &569670152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6487,6 +6518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &650662384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6681,6 +6715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &665079665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7163,6 +7198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &712265693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7582,7 +7618,8 @@ MonoBehaviour:
   canvasGeneral: {fileID: 93051783}
   reticula: {fileID: 312948172}
   canvasPuzzle: {fileID: 1668517321}
-  character: {fileID: 551873291}
+  puzzle1: {fileID: 0}
+  boton: {fileID: 0}
   mouseLocking: {fileID: 551873290}
 --- !u!1 &785939131
 GameObject:
@@ -8433,6 +8470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &855667595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11525,6 +11565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &1493857817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12299,6 +12340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &1643110117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13889,6 +13933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &1892686862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14268,6 +14315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &1940252190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14588,6 +14636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &1969130054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14851,6 +14900,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd37725f099433e9a5529db03b7185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalClick: {fileID: 0}
+  correctClick: {fileID: 0}
+  MistakeClick: {fileID: 0}
 --- !u!114 &1988282385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15215,6 +15267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &2102265776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15521,6 +15574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef4685dd25edec4882ae15900b29155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipSound: {fileID: 0}
 --- !u!212 &2140017236
 SpriteRenderer:
   m_ObjectHideFlags: 0

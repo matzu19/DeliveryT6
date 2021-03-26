@@ -44,6 +44,7 @@ public class Rompecabezas : MonoBehaviour
         bCollider.enabled = true;
         canvasPuzzle.SetActive(false);
         canvasGeneral.SetActive(true);
+        reticula.SetActive(true);
         camara.SetActive(false);
         mouseLocking.m_MouseLook.SetCursorLock(true);
         mouseLocking.m_WalkSpeed = 5;
