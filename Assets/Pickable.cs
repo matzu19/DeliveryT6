@@ -9,6 +9,7 @@ public class Pickable : MonoBehaviour
     [SerializeField] private GameObject pickableObject, PressClick, pApagar, pPrender;
     [SerializeField] private InventoryManager bagManager;
     [SerializeField] private SelectionManager objetoSelecto;
+    [SerializeField] private bool agarro;
 
     private Screw tornillo;
     private Gloves guantes;
@@ -45,6 +46,7 @@ public class Pickable : MonoBehaviour
                         guantes.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
                         PressClick.SetActive(false);
+                        agarro = true;
                     }
                     break;
                 case "Lever":
@@ -87,5 +89,9 @@ public class Pickable : MonoBehaviour
     {
         string[] tempInventory = inventory.ToArray();
         return tempInventory;
+    }
+    public bool Agarro()
+    {
+        return agarro;
     }
 }
