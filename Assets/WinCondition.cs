@@ -18,7 +18,7 @@ public class WinCondition : MonoBehaviour
         if (SwitchLever1.win && SwitchLever2.win && S3.activeInHierarchy)
         {
             canvaWin.SetActive(true);
-            Debug.Log("---Ganaste---");
+            Time.timeScale = 0;
         }
     }
 }
