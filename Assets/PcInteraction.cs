@@ -7,8 +7,6 @@ public class PcInteraction : MonoBehaviour, IAction
     [SerializeField] private GameObject CanvasPuzzle, reticula;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
  
-
-
     void Awake()
     {
         CanvasPuzzle.gameObject.SetActive(false);
@@ -20,12 +18,14 @@ public class PcInteraction : MonoBehaviour, IAction
         CanvasPuzzle.gameObject.SetActive(false);
         mouseLocking.m_MouseLook.SetCursorLock(true);
         reticula.SetActive(true);
+        mouseLocking.m_WalkSpeed = 5;
     }
     public void Activate()
     {    
         mouseLocking.m_MouseLook.SetCursorLock(false);
         CanvasPuzzle.gameObject.SetActive(true);  
-           reticula.SetActive(false);
+        reticula.SetActive(false);
+        mouseLocking.m_WalkSpeed = 0;
 
     }
     IEnumerator waitTime()

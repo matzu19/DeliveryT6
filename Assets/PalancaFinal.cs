@@ -6,6 +6,7 @@ public class PalancaFinal : MonoBehaviour
 {
     [SerializeField] private GameObject PressClick, pApagar, pPrender;
     [SerializeField] private Pickable pickable;
+    [SerializeField] private LoseCondition verificastate;
     private bool active;
 
     private void Update()
@@ -21,7 +22,7 @@ public class PalancaFinal : MonoBehaviour
             }
             else
             {
-
+                verificastate.perdiste();
             }
         }
         else PressClick.SetActive(false);
