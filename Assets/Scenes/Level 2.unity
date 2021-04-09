@@ -6187,6 +6187,7 @@ MonoBehaviour:
   rayOrigin: {fileID: 841690640}
   highlightMaterial: {fileID: 2100000, guid: 1800179563ceb6f41afabd077eff5668, type: 2}
   defaultMaterial: {fileID: 0}
+  PressE: {fileID: 833101338}
   selection: {fileID: 0}
 --- !u!1 &629280220
 GameObject:

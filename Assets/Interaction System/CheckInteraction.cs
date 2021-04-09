@@ -7,7 +7,7 @@ public class CheckInteraction : MonoBehaviour
     [SerializeField]
     private GameObject rayOrigin;
     [SerializeField] public Material highlightMaterial, defaultMaterial;
-
+    [SerializeField] GameObject PressE;
     public Transform selection;
 
     private bool canInteract;
@@ -27,6 +27,7 @@ public class CheckInteraction : MonoBehaviour
             var selectionMaterial = selection.GetComponent<Renderer>();
             selectionMaterial.material = defaultMaterial;
             canInteract = false;
+            PressE.SetActive(false);
         }
 
         currentReceiver = null;
@@ -45,6 +46,7 @@ public class CheckInteraction : MonoBehaviour
             var selectionMaterial = selection.GetComponent<Renderer>();
             selectionMaterial.material = highlightMaterial;
             canInteract = true;
+            PressE.SetActive(true);
         }
 
         if (canInteract)
