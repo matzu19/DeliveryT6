@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: c8d81f93975cad444b816070352517bc
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 2397168600807750378
+    second: Door|Open the door
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -98,7 +101,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
