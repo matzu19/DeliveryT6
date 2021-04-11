@@ -11,16 +11,12 @@ public class ComputerElectricity : MonoBehaviour , IAction
     GameObject isOn, isOff;
 
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         electricity = false;
         isOn.gameObject.SetActive(false);
         isOff.gameObject.SetActive(false);
     }
-    //Método que cambia la electricidad a encendida. Debe de ir a los scripts de las palancas y activar su variable electricidad
   
         
 

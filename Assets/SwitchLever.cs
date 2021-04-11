@@ -12,8 +12,7 @@ public class SwitchLever : MonoBehaviour, IAction
     
     void condicion1()
     {
-        //if (stream)
-            //activar animación
+
     }
     void condicion2()
     {

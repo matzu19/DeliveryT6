@@ -50,9 +50,9 @@ public class CheckInteraction : MonoBehaviour
         }
 
         if (canInteract)
-        {         
-           
-            if (Input.GetKeyDown(KeyCode.E))
+        {
+            PressE.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
             {
                 currentReceiver.Activate();
             }

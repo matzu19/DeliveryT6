@@ -9,6 +9,7 @@ public class LugarPalanca : MonoBehaviour
     [SerializeField] private Pickable lista;
     [SerializeField] private GameObject PressClick, palanca;
     [SerializeField] private Collider holder;
+    [SerializeField] private MeshRenderer rend;
 
     private bool EsElLugar;
 
@@ -19,8 +20,9 @@ public class LugarPalanca : MonoBehaviour
             PressClick.SetActive(true);
             if (Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(ColocarPalanca());
+                rend.enabled = true;
                 holder.enabled = !holder.enabled;
+                StartCoroutine(ColocarPalanca());
             }
         }
     }
@@ -36,7 +38,6 @@ public class LugarPalanca : MonoBehaviour
     IEnumerator ColocarPalanca()
     {
         PressClick.SetActive(false);
-        palanca.SetActive(true);
         lista.RemovePalanca(item.SelectedItem());
         yield return null;
     }
