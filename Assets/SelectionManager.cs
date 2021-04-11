@@ -20,25 +20,32 @@ public class SelectionManager : MonoBehaviour
 
     private void Update()
     {
-        if (_selection != null)//Deseleccion
+        try
         {
-            _selectionResponse.OnDeselect(_selection);//Object in Deselection
+            if (_selection != null)//Deseleccion
+            {
+                _selectionResponse.OnDeselect(_selection);//Object in Deselection
+            }
+
+            _selection = null;
+
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 1.5f))
+            {
+                var selection = hit.transform;
+                highlight.defaultMaterial = selection.GetComponent<Renderer>().material;
+                if (selection.CompareTag(selectableTag)) _selection = selection;
+            }//Raycast Region
+
+            if (_selection != null)//Seleccion
+            {
+                _selectionResponse.OnSelect(_selection);//Object in selection
+            }
         }
-  
-        _selection = null;
-
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1.5f))
+        catch (MissingComponentException)
         {
-            var selection = hit.transform;
-            highlight.defaultMaterial = selection.GetComponent<Renderer>().material;
-            if (selection.CompareTag(selectableTag)) _selection = selection;
-        }//Raycast Region
 
-        if (_selection != null)//Seleccion
-        {
-            _selectionResponse.OnSelect(_selection);//Object in selection
         }
     }
     public GameObject ObjetoSelecto()

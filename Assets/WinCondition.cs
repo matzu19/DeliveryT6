@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
 
-    [SerializeField] SwitchLever SwitchLever1, SwitchLever2;
-    [SerializeField] GameObject S3, canvaWin;
+    [SerializeField] SwitchLever SwitchLever1, SwitchLever2, switchLever3;
+    [SerializeField] GameObject  canvaWin;
 
 
     private void Awake()
@@ -15,10 +16,17 @@ public class WinCondition : MonoBehaviour
     }
     private void Update()
     {
-        if (SwitchLever1.win && SwitchLever2.win && S3.activeInHierarchy)
+        try
         {
-            canvaWin.SetActive(true);
-            Time.timeScale = 0;
+            if (SwitchLever1.win && SwitchLever2.win && switchLever3.win)
+            {
+                canvaWin.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+        catch (NullReferenceException)
+        {
+
         }
     }
 }

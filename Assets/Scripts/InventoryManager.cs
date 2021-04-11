@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -63,7 +64,11 @@ public class InventoryManager : MonoBehaviour
     }
     public string Item(int x)
     {
-        return bag[x];
+        try { return bag[x]; }
+        catch (IndexOutOfRangeException)
+        {
+            return null;
+        }
     }
     public void BorrarPalanca()
     {

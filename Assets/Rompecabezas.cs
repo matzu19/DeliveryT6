@@ -13,7 +13,7 @@ public class Rompecabezas : MonoBehaviour
         if (puzzleActivo)
         {
             PressE.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) && PressE.activeInHierarchy)
+            if (Input.GetMouseButtonDown(0) && PressE.activeInHierarchy)
             {
                 PuzzleActivated();
             }
