@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.1815465, g: 0.22718894, b: 0.30740392, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3066,6 +3066,7 @@ MonoBehaviour:
   PressClick: {fileID: 1676415059}
   palanca: {fileID: 226279338}
   holder: {fileID: 282539787}
+  rend: {fileID: 0}
 --- !u!23 &282539789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6037,8 +6038,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4f48b7d110d01419ece64e082aef84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInteractionDistance: 3
   rayOrigin: {fileID: 661528517}
+  highlightMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 0}
+  PressE: {fileID: 0}
+  selection: {fileID: 0}
 --- !u!1 &667612484
 GameObject:
   m_ObjectHideFlags: 0
@@ -6863,7 +6867,7 @@ MonoBehaviour:
   timer: 0
   colorMid: {r: 1, g: 0.7335777, b: 0, a: 1}
   ColorFinal: {r: 1, g: 0, b: 0, a: 1}
-  canvaLose: {fileID: 1671868131}
+  canvaLose: {fileID: 1866569124}
 --- !u!114 &689157640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9783,6 +9787,8 @@ MonoBehaviour:
   PressClick: {fileID: 1676415059}
   pApagar: {fileID: 1098449254}
   pPrender: {fileID: 2031892993}
+  pickable: {fileID: 0}
+  verificastate: {fileID: 0}
 --- !u!65 &1098449259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18331,6 +18337,7 @@ GameObject:
   - component: {fileID: 1866569123}
   - component: {fileID: 1866569122}
   - component: {fileID: 1866569121}
+  - component: {fileID: 1866569124}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -18413,6 +18420,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866569119}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1866569124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866569119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751d81b7d68c3624f830fc73adefd795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseCanvas: {fileID: 1713028907}
 --- !u!1001 &1868514446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20614,7 +20634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SwitchLever1: {fileID: 1426955806}
   SwitchLever2: {fileID: 1098449256}
-  S3: {fileID: 226279338}
+  switchLever3: {fileID: 0}
   canvaWin: {fileID: 1553368038}
 --- !u!4 &2018266723
 Transform:
@@ -21601,6 +21621,7 @@ MonoBehaviour:
   pPrender: {fileID: 2031892993}
   bagManager: {fileID: 106446949}
   objetoSelecto: {fileID: 1995499377}
+  agarro: 0
 --- !u!4 &2082584833
 Transform:
   m_ObjectHideFlags: 0
