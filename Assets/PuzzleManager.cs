@@ -37,6 +37,7 @@ public class PuzzleManager : MonoBehaviour
                 {
                     lugarTornillos.EsElLugarCorrecto();
                 }
+                else break;
                 break;
             case "P Lever":
                 SelectedItem();
@@ -44,12 +45,9 @@ public class PuzzleManager : MonoBehaviour
                 {
                     lugarPalanca.EsElLugarCorrecto();
                 }
-                break;
-            case "Lever 2":
-                pFinal.ActivarPalancaFinal();
+                else break;
                 break;
             case null:
-                pFinal.DesactivarPalancaFinal();
                 lugarPalanca.NoEsElLugarCorrecto();
                 lugarTornillos.NoEsElLugarCorrecto();
                 rompecabezas.DesactivarPuzzle();

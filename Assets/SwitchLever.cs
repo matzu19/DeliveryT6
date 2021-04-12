@@ -8,19 +8,26 @@ public class SwitchLever : MonoBehaviour, IAction
     private int n;
     public bool stream;
     public bool win;
-    [SerializeField]
-    AudioSource activateSound;
-    
 
-    void Start()
+    
+    void condicion1()
     {
-        activateSound = gameObject.GetComponent<AudioSource>();
+
     }
+    void condicion2()
+    {
+
+    }
+    void condicion3()
+    {
+
+    }
+
+
     public void Activate()
     {
         if (stream)
         {
-            activateSound.Play();
             this.transform.Rotate(0f, 0f, -80f);
             win = true;
         }
