@@ -6,9 +6,13 @@ public class Password : MonoBehaviour
 {
     private string input;
     [SerializeField]private GameObject canvasField;
+    AudioSource feedback;
+    public AudioClip error;
+    public AudioClip discover;
     private void Start()
     {
-        input = "britishman";
+        feedback = gameObject.GetComponent<AudioSource>();
+        input = "970515";
     }
 
     public void ReadPassword(string s)
@@ -16,15 +20,24 @@ public class Password : MonoBehaviour
         s=s.ToLower();
         if (s == input)
         {
-            canvasField.SetActive(false);
+            feedback.clip = discover;
+            feedback.Play();
+            StartCoroutine(waitTime());
+            //canvasField.SetActive(false);
             Debug.Log("contraseña correcta");
         }
         else
         {
+            feedback.clip = error;
+            feedback.Play();
             Debug.Log("contraseña incorrecta");
         }
-
-
         
+    }
+    IEnumerator waitTime()
+    {
+        yield return new WaitForSeconds(2f);
+        canvasField.SetActive(false);
+
     }
 }
