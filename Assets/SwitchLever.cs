@@ -8,6 +8,7 @@ public class SwitchLever : MonoBehaviour, IAction
     private int n;
     public bool stream;
     public bool win;
+    [SerializeField] private Gloves guantes;
 
     
     void condicion1()
@@ -26,10 +27,14 @@ public class SwitchLever : MonoBehaviour, IAction
 
     public void Activate()
     {
-        if (stream)
+        if (stream && guantes.guantesPuesto())
         {
             this.transform.Rotate(0f, 0f, -80f);
             win = true;
+        }
+        else
+        {
+            //Feedback
         }
         
         Debug.Log("el estado de la corriente es " + stream);
