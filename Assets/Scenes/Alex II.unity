@@ -3020,6 +3020,7 @@ MonoBehaviour:
   n: 3
   stream: 0
   win: 0
+  activateSound: {fileID: 0}
 --- !u!114 &282539786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3061,7 +3062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {fileID: 1995499377}
-  item: {fileID: 296534879}
+  item: {fileID: 0}
   lista: {fileID: 2082584832}
   PressClick: {fileID: 1676415059}
   palanca: {fileID: 226279338}
@@ -4505,7 +4506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {fileID: 1995499377}
-  item: {fileID: 296534879}
+  item: {fileID: 0}
   lista: {fileID: 2082584832}
   PressClick: {fileID: 1676415059}
   tornillo: {fileID: 1395243845}
@@ -5295,7 +5296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {fileID: 1995499377}
-  item: {fileID: 296534879}
+  item: {fileID: 0}
   lista: {fileID: 2082584832}
   PressClick: {fileID: 1676415059}
   tornillo: {fileID: 1552311815}
@@ -5999,6 +6000,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 98c58c8dd46640c49bb5f557afafea7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 98c58c8dd46640c49bb5f557afafea7c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c58c8dd46640c49bb5f557afafea7c, type: 3}
@@ -8067,9 +8072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776d4f7b84928ec44a703a93fbf3d123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swithcOne: {fileID: 1426955806}
-  swithcTwo: {fileID: 1098449256}
-  swithcThree: {fileID: 282539785}
+  swithcOne: {fileID: 0}
+  swithcTwo: {fileID: 0}
+  swithcThree: {fileID: 0}
   isOn: {fileID: 846161496}
   isOff: {fileID: 1597349814}
 --- !u!65 &818209522
@@ -8858,7 +8863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {fileID: 1995499377}
-  item: {fileID: 296534879}
+  item: {fileID: 0}
   lista: {fileID: 2082584832}
   PressClick: {fileID: 1676415059}
   tornillo: {fileID: 432335064}
@@ -9757,6 +9762,7 @@ MonoBehaviour:
   n: 2
   stream: 0
   win: 0
+  activateSound: {fileID: 0}
 --- !u!114 &1098449257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12870,6 +12876,7 @@ MonoBehaviour:
   n: 1
   stream: 0
   win: 0
+  activateSound: {fileID: 0}
 --- !u!65 &1426955807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14994,7 +15001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasPuzzle: {fileID: 1829342036}
   reticula: {fileID: 1985708564}
-  mouseLocking: {fileID: 661528518}
+  mouseLocking: {fileID: 0}
 --- !u!114 &1641500443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15600,7 +15607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1671868132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16828,7 +16835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {fileID: 1995499377}
-  item: {fileID: 296534879}
+  item: {fileID: 0}
   lista: {fileID: 2082584832}
   PressClick: {fileID: 1676415059}
   tornillo: {fileID: 606481800}
@@ -20229,7 +20236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cc5d38748eaa345a29bad10f5239d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzle: {fileID: 296534879}
+  puzzle: {fileID: 0}
   highlightMaterial: {fileID: 2100000, guid: 1800179563ceb6f41afabd077eff5668, type: 2}
   defaultMaterial: {fileID: 0}
 --- !u!4 &1995499379
@@ -20632,8 +20639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96498b68a0bdea648b5636d1c36959fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwitchLever1: {fileID: 1426955806}
-  SwitchLever2: {fileID: 1098449256}
+  SwitchLever1: {fileID: 0}
+  SwitchLever2: {fileID: 0}
   switchLever3: {fileID: 0}
   canvaWin: {fileID: 1553368038}
 --- !u!4 &2018266723
@@ -21619,8 +21626,8 @@ MonoBehaviour:
   PressClick: {fileID: 1676415059}
   pApagar: {fileID: 1098449254}
   pPrender: {fileID: 2031892993}
-  bagManager: {fileID: 106446949}
-  objetoSelecto: {fileID: 1995499377}
+  bagManager: {fileID: 0}
+  objetoSelecto: {fileID: 0}
   agarro: 0
 --- !u!4 &2082584833
 Transform:
