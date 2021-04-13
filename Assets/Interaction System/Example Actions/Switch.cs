@@ -17,7 +17,7 @@ public class Switch : MonoBehaviour , IAction
     public void Start()
     {
         material.color = inactiveColor;
-
+        
     }
 
     public void Activate()

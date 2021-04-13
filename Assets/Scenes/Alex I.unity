@@ -3268,6 +3268,7 @@ RectTransform:
   - {fileID: 974727910}
   - {fileID: 1139225395}
   - {fileID: 805020988}
+  - {fileID: 1031278808}
   m_Father: {fileID: 2037346062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7101,7 +7102,10 @@ MonoBehaviour:
   n: 1
   stream: 0
   win: 0
-  activateSound: {fileID: 0}
+  guantes: {fileID: 0}
+  canvaDamage: {fileID: 1031278807}
+  leverActivate: {fileID: 8300000, guid: 73a41cf9a0c12a74591382d037be4e53, type: 3}
+  problem: {fileID: 8300000, guid: c95620380dd50ff409471fc35341a6cf, type: 3}
 --- !u!82 &614079568
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11726,6 +11730,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1016658810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031278807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031278808}
+  - component: {fileID: 1031278810}
+  - component: {fileID: 1031278809}
+  m_Layer: 5
+  m_Name: DamageImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1031278808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031278807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 336929352}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00012207, y: -0.000023842}
+  m_SizeDelta: {x: 1920.0002, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1031278809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ccad7e7fbda51a84cae9f082c8ceb5b6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1031278810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031278807}
+  m_CullTransparentMesh: 0
 --- !u!1 &1041839695
 GameObject:
   m_ObjectHideFlags: 0
@@ -11851,6 +11929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recogible: {fileID: 544778498}
+  guantesOn: 0
 --- !u!65 &1041895415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16602,7 +16681,10 @@ MonoBehaviour:
   n: 2
   stream: 0
   win: 0
-  activateSound: {fileID: 0}
+  guantes: {fileID: 0}
+  canvaDamage: {fileID: 1031278807}
+  leverActivate: {fileID: 8300000, guid: 73a41cf9a0c12a74591382d037be4e53, type: 3}
+  problem: {fileID: 8300000, guid: c95620380dd50ff409471fc35341a6cf, type: 3}
 --- !u!82 &1528358457
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22404,7 +22486,10 @@ MonoBehaviour:
   n: 3
   stream: 0
   win: 0
-  activateSound: {fileID: 0}
+  guantes: {fileID: 0}
+  canvaDamage: {fileID: 1031278807}
+  leverActivate: {fileID: 8300000, guid: 73a41cf9a0c12a74591382d037be4e53, type: 3}
+  problem: {fileID: 8300000, guid: c95620380dd50ff409471fc35341a6cf, type: 3}
 --- !u!114 &2044928674
 MonoBehaviour:
   m_ObjectHideFlags: 0
