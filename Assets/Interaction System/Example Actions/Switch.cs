@@ -23,7 +23,7 @@ public class Switch : MonoBehaviour , IAction
     public void Activate()
     {
         activated = !activated;
-        if (activated)
+        if (activated && material.color!=activeColor)
         {
             material.color = activeColor;
         }
