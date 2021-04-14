@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class Lever : MonoBehaviour
 {
     [SerializeField] private Pickable recogible;
+    [SerializeField] private AudioSource pickAudio;
 
     public void RecogerObjeto()
     {
+        pickAudio.Play();
         recogible.AddObject("Lever");
     }
 }
