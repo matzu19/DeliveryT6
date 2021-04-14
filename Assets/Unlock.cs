@@ -9,12 +9,12 @@ public class Unlock : MonoBehaviour
 
     public void UnlockedPuzzle()
     {
+        Destroy(camara);
         StartCoroutine(Unlocked());
     }
  IEnumerator Unlocked()
     {
-        yield return new WaitForSeconds(1f);
-        Destroy(camara);
+        yield return new WaitForSeconds(0.5f);
         mouseLocking.m_MouseLook.SetCursorLock(true);
         mouseLocking.m_WalkSpeed = 5;
         canvasPuzzle.SetActive(false);

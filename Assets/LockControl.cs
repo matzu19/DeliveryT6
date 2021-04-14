@@ -136,9 +136,8 @@ public class LockControl :  MonoBehaviour
 
     IEnumerator CodigoCorrecto()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         puzzleDone.UnlockedPuzzle();
-
     }
     IEnumerator ErrorDeCodigo()
     {
