@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,11 +7,11 @@ using UnityEngine;
 public class LockControl :  MonoBehaviour
 {
     [SerializeField] private Unlock puzzleDone;
-    [SerializeField] private string code;
+    private string code;
     [SerializeField] private TMP_Text codeScreen;
     private Playsound click;
     private bool code4less;
-    [SerializeField] GameObject cajon;
+    [SerializeField] GameObject cajon, candado;
 
     private void Awake()
     {
@@ -20,17 +21,25 @@ public class LockControl :  MonoBehaviour
     #region botones codigo
     private void Update()
     {
-        if (code.Length < 4)
+        try
         {
-            code4less = true;
-            codeScreen.text = code;
+
+            if (code.Length < 4)
+            {
+                code4less = true;
+                codeScreen.text = code;
+            }
+            else if (code.Length == 4)
+            {
+                code4less = false;
+                codeScreen.text = code;
+            }
+            else code4less = false;
         }
-        else if(code.Length == 4)
+        catch (NullReferenceException)
         {
-            code4less = false;
-            codeScreen.text = code;
+
         }
-        else code4less = false;
     }
     public void Press1()
     {
@@ -119,7 +128,6 @@ public class LockControl :  MonoBehaviour
         {
             click.ClickyDone();
             codeScreen.color = Color.green;
-            cajon.GetComponent<Animation>().Play();
             StartCoroutine(CodigoCorrecto());
         }
         else StartCoroutine(ErrorDeCodigo());
@@ -136,9 +144,10 @@ public class LockControl :  MonoBehaviour
 
     IEnumerator CodigoCorrecto()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
+        candado.SetActive(false);
+        cajon.GetComponent<Animation>().Play();
         puzzleDone.UnlockedPuzzle();
-
     }
     IEnumerator ErrorDeCodigo()
     {
