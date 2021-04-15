@@ -16,6 +16,7 @@ public class Switch : MonoBehaviour , IAction
 
     public void Start()
     {
+        activated = false;
         material.color = inactiveColor;
         
     }
@@ -27,7 +28,7 @@ public class Switch : MonoBehaviour , IAction
         {
             material.color = activeColor;
         }
-        else
+        if (activated == false && material.color!=inactiveColor)
         {
             material.color = inactiveColor;
         }
