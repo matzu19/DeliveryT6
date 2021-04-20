@@ -7,13 +7,14 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Transform[] pictures;
 
-    [SerializeField] private GameObject winText, camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton; //cambio de Santiago
+    [SerializeField] private GameObject  camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton, Nota; //cambio de Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     public static bool youWin;
 
     void Awake()
     {
-        winText.SetActive(false);
+        Nota.SetActive(false);
+        //winText.SetActive(false);
         youWin = false;
     }
 
@@ -24,9 +25,10 @@ public class GameControl : MonoBehaviour
             pictures[10].rotation.z == 0 && pictures[11].rotation.z == 0 && pictures[12].rotation.z == 0 && pictures[13].rotation.z == 0 && pictures[14].rotation.z == 0 &&
             pictures[15].rotation.z == 0)     
         {
+            Nota.SetActive(true);
             youWin = true;
             boton.SetActive(false);
-            winText.SetActive(true);
+           // winText.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(true);
             mouseLocking.m_WalkSpeed = 5;
             Destroy(camara);
@@ -37,7 +39,7 @@ public class GameControl : MonoBehaviour
     IEnumerator ApagarPuzzle()
     {
         yield return new WaitForSeconds(3);
-        winText.SetActive(false);
+       // winText.SetActive(false);
         canvasPuzzle.SetActive(false);
         canvasGeneral.SetActive(true);
         reticula.SetActive(true);
