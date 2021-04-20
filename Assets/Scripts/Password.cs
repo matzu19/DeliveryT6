@@ -12,7 +12,7 @@ public class Password : MonoBehaviour
     private void Start()
     {
         feedback = gameObject.GetComponent<AudioSource>();
-        input = "970515";
+        input = "beachboys";
     }
 
     public void ReadPassword(string s)
