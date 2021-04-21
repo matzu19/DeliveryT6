@@ -46,7 +46,6 @@ public class CheckInteraction : MonoBehaviour
             var selectionMaterial = selection.GetComponent<Renderer>();
             selectionMaterial.material = highlightMaterial;
             canInteract = true;
-            PressE.SetActive(true);
         }
 
         if (canInteract)

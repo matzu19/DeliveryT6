@@ -25,12 +25,12 @@ public class PuzzleManager : MonoBehaviour
             case "Candado":
                 candado.ActivarPuzzle();
                 break;
-            case "Computadora":
-                computadora.ActivarPuzzle();
-                break;
-            case "Interruptores":
-                interruptores.ActivarPuzzle();
-                break;
+            /* case "Computadora":
+                 computadora.ActivarPuzzle();
+                 break;
+             case "Interruptores":
+                 interruptores.ActivarPuzzle();
+                 break;*/
             case "P Screw":
                 SelectedItem();
                 if (puzzleNameIs == "P " + sName)
