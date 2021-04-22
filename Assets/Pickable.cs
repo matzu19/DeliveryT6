@@ -9,11 +9,13 @@ public class Pickable : MonoBehaviour
     [SerializeField] private GameObject pickableObject, PressClick, pApagar, pPrender;
     [SerializeField] private InventoryManager bagManager;
     [SerializeField] private SelectionManager objetoSelecto;
+    [SerializeField] private Image pickImg;
     [SerializeField] private bool agarro;
 
     private Screw tornillo;
     private Gloves guantes;
     private Lever palanca;
+    [SerializeField] private float timeHeld;
 
     private void Awake()
     {
@@ -32,30 +34,66 @@ public class Pickable : MonoBehaviour
             {
                 case "Screw":
                     PressClick.SetActive(true);
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButton(0))
+                    {
+                        this.timeHeld += Time.deltaTime;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 1f);
+                    }
+                    else if (Input.GetMouseButtonUp(0))
+                    {
+                        this.timeHeld = 0;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 0f);
+                    }
+
+                    if (this.timeHeld > 1f)
                     {
                         tornillo.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
                         PressClick.SetActive(false);
+                        reseteo();
                     }
                     break;
                 case "Gloves":
                     PressClick.SetActive(true);
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButton(0))
+                    {
+                        this.timeHeld += Time.deltaTime;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 1f);
+                    }
+                    else if (Input.GetMouseButtonUp(0))
+                    {
+                        this.timeHeld = 0;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 0f);
+                    }
+
+                    if (this.timeHeld > 1f)
                     {
                         guantes.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
                         PressClick.SetActive(false);
                         agarro = true;
+                        reseteo();
                     }
                     break;
                 case "Lever":
                     PressClick.SetActive(true);
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButton(0))
+                    {
+                        this.timeHeld += Time.deltaTime;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 1f);
+                    }
+                    else if (Input.GetMouseButtonUp(0))
+                    {
+                        this.timeHeld = 0;
+                        pickImg.color = new Color(0f, this.timeHeld, 0f, 0f);
+                    }
+
+                    if (this.timeHeld > 1f)
                     {
                         palanca.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
                         PressClick.SetActive(false);
+                        reseteo();
                     }
                     break;
 
@@ -93,5 +131,10 @@ public class Pickable : MonoBehaviour
     public bool Agarro()
     {
         return agarro;
+    }
+    public void reseteo()
+    {
+        this.timeHeld = 0;
+        pickImg.color = new Color(0f, this.timeHeld, 0f, 0f);
     }
 }

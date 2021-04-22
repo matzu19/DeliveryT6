@@ -8,7 +8,7 @@ public class LugarTornillos : MonoBehaviour
     [SerializeField] private PuzzleManager item;
     [SerializeField] private Pickable lista;
     [SerializeField] private GameObject PressClick, tornillo;
-    [SerializeField] private Collider holder, palanca;
+    [SerializeField] private Collider holder;
 
     private bool EsElLugar;
 
@@ -17,11 +17,9 @@ public class LugarTornillos : MonoBehaviour
 
         if (EsElLugar)
         {
-
             PressClick.SetActive(true);
             if (Input.GetMouseButtonDown(0))
             {
-                palanca.enabled = true;
                 holder.enabled = !holder.enabled;
                 StartCoroutine(ColocarTornillo());
                 Debug.Log("puesto en el lugar");
