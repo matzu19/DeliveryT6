@@ -8,8 +8,6 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private PalancaFinal pFinal;
     [SerializeField] private Rompecabezas rompecabezas;
     [SerializeField] private Candado candado;
-    [SerializeField] private Computadora computadora;
-    [SerializeField] private Interruptores interruptores;
     [SerializeField] private LugarTornillos lugarTornillos;
     [SerializeField] private LugarPalanca lugarPalanca;
     [SerializeField] private InventoryManager InvMgr;
@@ -25,12 +23,6 @@ public class PuzzleManager : MonoBehaviour
             case "Candado":
                 candado.ActivarPuzzle();
                 break;
-            /* case "Computadora":
-                 computadora.ActivarPuzzle();
-                 break;
-             case "Interruptores":
-                 interruptores.ActivarPuzzle();
-                 break;*/
             case "P Screw":
                 SelectedItem();
                 if (puzzleNameIs == "P " + sName)
@@ -52,8 +44,6 @@ public class PuzzleManager : MonoBehaviour
                 lugarTornillos.NoEsElLugarCorrecto();
                 rompecabezas.DesactivarPuzzle();
                 candado.DesactivarPuzzle();
-                computadora.DesactivarPuzzle();
-                interruptores.DesactivarPuzzle();
                 break;
         }
     }

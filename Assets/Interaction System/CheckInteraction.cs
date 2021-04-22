@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckInteraction : MonoBehaviour
 {   
@@ -9,6 +10,9 @@ public class CheckInteraction : MonoBehaviour
     [SerializeField] public Material highlightMaterial, defaultMaterial;
     [SerializeField] GameObject PressE;
     public Transform selection;
+
+    [SerializeField] private Image pickImg;
+    private float timeHeld;
 
     private bool canInteract;
 
@@ -51,13 +55,34 @@ public class CheckInteraction : MonoBehaviour
         if (canInteract)
         {
             PressE.SetActive(true);
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
+            {
+                timeHeld += Time.deltaTime;
+                pickImg.color = new Color(0f, timeHeld, 0f, 1f);
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                this.timeHeld = 0;
+                pickImg.color = new Color(0f, timeHeld, 0f, 0f);
+            }
+
+            if (timeHeld > 1f)
             {
                 currentReceiver.Activate();
+                CleanImg();
             }
             
         }
+        else
+        {
+            timeHeld = 0;
+            pickImg.color = new Color(0f, timeHeld, 0f, 0f);
+        }
 
     }
-
+    public void CleanImg()
+    {
+        timeHeld = 0;
+        pickImg.color = new Color(0f, timeHeld, 0f, 0f);
+    }
 }
