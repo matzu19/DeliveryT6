@@ -10,6 +10,7 @@ public class SwitchLever : MonoBehaviour, IAction
     public bool stream;
     public bool win;
     [SerializeField] private Gloves guantes;
+    public GameObject screw;
     [SerializeField] GameObject canvaDamage,g_message;
     public Text message;
 
@@ -43,7 +44,19 @@ public class SwitchLever : MonoBehaviour, IAction
     public void Activate()
     {
         //Debug.Log("--Activate lever ");
-        if (stream && guantes.guantesPuesto())
+
+       
+        if(stream && guantes.guantesPuesto() && n == 2 && screw.gameObject.activeInHierarchy)
+        {
+            sound.clip = leverActivate;
+            sound.Play();
+            this.transform.Rotate(0f, 0f, -80f);
+            win = true;
+            message.text = ("Lever is active");
+            g_message.SetActive(true);
+            StartCoroutine(waitTimeOn(g_message));
+        }
+        else if (stream && guantes.guantesPuesto() && n != 2)
         {
             sound.clip = leverActivate;
             sound.Play();
@@ -59,13 +72,25 @@ public class SwitchLever : MonoBehaviour, IAction
             ProblemPlay();
             sound.Play();
             StartCoroutine(waitTimeOn(canvaDamage));
-            message.text = ("this stream could kill");
+            message.text = ("¡This stream could kill!");
+            g_message.SetActive(true);
+            StartCoroutine(waitTimeOn(g_message));
+        }
+        else if (n == 2 && screw.gameObject.activeInHierarchy)
+        {
+            message.text = ("The machine has no energy");
+            g_message.SetActive(true);
+            StartCoroutine(waitTimeOn(g_message));
+        }
+        else if (n==2)
+        {
+            message.text = ("This lever has a missing screw");
             g_message.SetActive(true);
             StartCoroutine(waitTimeOn(g_message));
         }
         else
         {
-            message.text = ("the machine has no energy");
+            message.text = ("The machine has no energy");
             g_message.SetActive(true);
             StartCoroutine(waitTimeOn(g_message));
         }
