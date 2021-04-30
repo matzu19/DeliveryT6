@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class WinCondition : MonoBehaviour
         {
             if (SwitchLever1.win && SwitchLever2.win && switchLever3.win)
             {
-                canvaWin.SetActive(true);
+                SceneManager.LoadScene("cinematic Win");
+                //canvaWin.SetActive(true);
                 Time.timeScale = 0;
             }
         }
