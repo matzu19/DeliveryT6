@@ -24062,7 +24062,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -7251079419822574725, guid: 11bb505f04194454580d587614cf8e7d, type: 3}
 --- !u!23 &2077324937
 MeshRenderer:

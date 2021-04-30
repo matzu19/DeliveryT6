@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Creditos.unity
     guid: 39e908bec12084a4eb557b45be715695
   - enabled: 0
-    path: Assets/Scenes/Level.unity
+    path: 
     guid: dc5dec593a504b9478c91c5edcdf7764
   - enabled: 1
     path: Assets/Scenes/cinematic.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 7f9f0cc518856d849888322f7fba81e3
+  - enabled: 1
+    path: Assets/Scenes/cinematic Win.unity
+    guid: 4c4a51983c7412a41b4da99b7b437603
   m_configObjects: {}
