@@ -12,16 +12,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Columna
-    second: {fileID: 2100000, guid: 6ba86717f20e0404d8d1ca79c1c70ad2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Emissive
-    second: {fileID: 2100000, guid: 4515776d482209845b7b5db6bc5df854, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Piso
     second: {fileID: 2100000, guid: 300f6938278364f408f3667e9c79edc1, type: 2}
   - first:
