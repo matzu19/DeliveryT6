@@ -10391,7 +10391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7bef57cfaf07ef48b7a834f0340af52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5062504
+      value: 0.312
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7bef57cfaf07ef48b7a834f0340af52, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10399,7 +10399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7bef57cfaf07ef48b7a834f0340af52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5463493
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7bef57cfaf07ef48b7a834f0340af52, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10437,25 +10437,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 824302390}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &824302392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: e7bef57cfaf07ef48b7a834f0340af52,
-    type: 3}
-  m_PrefabInstance: {fileID: 824302390}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &824302393
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824302392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.5195255, y: 7.557312, z: 9.87816}
-  m_Center: {x: 0.020652534, y: 0.86925304, z: -3.3628445}
 --- !u!1 &834295629
 GameObject:
   m_ObjectHideFlags: 0
@@ -12601,8 +12582,8 @@ MonoBehaviour:
   interactMessage: Press E to Interact
   objectsWithActions:
   - {fileID: 1048470057}
---- !u!65 &1048470060
-BoxCollider:
+--- !u!64 &1048470060
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12611,9 +12592,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.037670318, y: 0.046293464, z: 0.14214437}
-  m_Center: {x: -0.0032916486, y: -0.0037864035, z: 0.04762772}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: ef8990232721c2d48b8f0157e4a981d2, type: 3}
 --- !u!1 &1093624709
 GameObject:
   m_ObjectHideFlags: 0
@@ -13574,9 +13556,9 @@ GameObject:
   - component: {fileID: 1182080028}
   - component: {fileID: 1182080032}
   - component: {fileID: 1182080031}
-  - component: {fileID: 1182080030}
   - component: {fileID: 1182080029}
   - component: {fileID: 1182080033}
+  - component: {fileID: 1182080030}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Selectable
@@ -13612,8 +13594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recogible: {fileID: 687212633}
   pickAudio: {fileID: 1182080033}
---- !u!65 &1182080030
-BoxCollider:
+--- !u!64 &1182080030
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13622,9 +13604,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0047351024, y: 0.00965064, z: 0.0026143687}
-  m_Center: {x: -0.0017788876, y: 0.0042050886, z: -0.0013360925}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7251079419822574725, guid: 11bb505f04194454580d587614cf8e7d, type: 3}
 --- !u!23 &1182080031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19384,8 +19367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recogible: {fileID: 687212633}
   pickAudio: {fileID: 1703162052}
---- !u!65 &1703162049
-BoxCollider:
+--- !u!64 &1703162049
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19394,9 +19377,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.35}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -881844236896109120, guid: e41366bf5beec864dbfda8a1307025f6, type: 3}
 --- !u!82 &1703162052
 AudioSource:
   m_ObjectHideFlags: 0
