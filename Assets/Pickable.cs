@@ -67,7 +67,7 @@ public class Pickable : MonoBehaviour
                     }
 
                     if (this.timeHeld > 1f)
-                    {
+                    {                      
                         guantes.RecogerObjeto();
                         objetoSelecto.DestruirObjeto();
                         PressClick.SetActive(false);

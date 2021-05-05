@@ -180,7 +180,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             catch (IndexOutOfRangeException)
             {
-                Debug.Log("No funciona el audio de los pasos, porfavor arreglar.");
+               // Debug.Log("No funciona el audio de los pasos, porfavor arreglar.");
             }
         }
 
