@@ -85,13 +85,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-       /* private void PlayLandingSound()
+        private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
-        */
+        
 
         private void FixedUpdate()
         {
