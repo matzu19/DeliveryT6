@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28502738, g: 0.3713941, b: 0.49601358, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502735, g: 0.3713942, b: 0.4960114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4533,6 +4533,16 @@ PrefabInstance:
     - target: {fileID: 4621928493842378, guid: 373095bd3f7ddb948bce9f5ece6ef02d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 392049409037661013, guid: 373095bd3f7ddb948bce9f5ece6ef02d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.179216
+      objectReference: {fileID: 0}
+    - target: {fileID: 392049409037661013, guid: 373095bd3f7ddb948bce9f5ece6ef02d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.589608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 373095bd3f7ddb948bce9f5ece6ef02d, type: 3}
@@ -18966,6 +18976,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123294890}
     m_Modifications:
+    - target: {fileID: -6512559430952005566, guid: dadcfd22d95c4fb46a4151afc49af152,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.7282478
+      objectReference: {fileID: 0}
+    - target: {fileID: -6512559430952005566, guid: dadcfd22d95c4fb46a4151afc49af152,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.8641239
+      objectReference: {fileID: 0}
     - target: {fileID: 1358513410111006, guid: dadcfd22d95c4fb46a4151afc49af152, type: 3}
       propertyPath: m_Name
       value: bench
@@ -24499,8 +24519,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0400042, y: 0.230819, z: 0.030532857}
   m_Center: {x: -0.3296509, y: 0.1156346, z: 0.4125502}
---- !u!65 &2094365764
-BoxCollider:
+--- !u!64 &2094365764
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24508,10 +24528,11 @@ BoxCollider:
   m_GameObject: {fileID: 2094365757}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0400042, y: 0.230819, z: 0.030532857}
-  m_Center: {x: -0.3296509, y: 0.1156346, z: 0.4125502}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6416302070336371891, guid: 694bdd89493700b43a9bb9b0f2c5f373, type: 3}
 --- !u!65 &2094365765
 BoxCollider:
   m_ObjectHideFlags: 0
