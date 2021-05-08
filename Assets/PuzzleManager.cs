@@ -29,6 +29,9 @@ public class PuzzleManager : MonoBehaviour
             case "Candado":
                 candado.ActivarPuzzle();
                 break;
+            case "Rueda":
+                candado.ActivarPuzzle();
+                break;
             case "P Screw":
                 SelectedItem();
                 if (puzzleNameIs == "P " + sName)
