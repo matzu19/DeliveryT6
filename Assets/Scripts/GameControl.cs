@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Transform[] pictures;
 
-    [SerializeField] private GameObject  camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton, Nota; //cambio de Santiago
+    [SerializeField] private GameObject  camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton, Nota, rompekbzas; //cambio de Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     public static bool youWin;
 
@@ -25,13 +25,14 @@ public class GameControl : MonoBehaviour
             pictures[10].rotation.z == 0 && pictures[11].rotation.z == 0 && pictures[12].rotation.z == 0 && pictures[13].rotation.z == 0 && pictures[14].rotation.z == 0 &&
             pictures[15].rotation.z == 0)     
         {
+            rompekbzas.tag = "Untagged";
             Nota.SetActive(true);
             youWin = true;
             boton.SetActive(false);
            // winText.SetActive(true);
             mouseLocking.m_MouseLook.SetCursorLock(true);
             mouseLocking.m_WalkSpeed = 5;
-            Destroy(camara);
+            camara.SetActive(false);
             StartCoroutine(ApagarPuzzle());
         }
 

@@ -12,9 +12,14 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private LugarPalanca lugarPalanca;
     [SerializeField] private InventoryManager InvMgr;
     [SerializeField] private InventoryScroll InvScl;
+    [SerializeField] private GameObject camara1, camara2, camara3, pressE;
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if(camara1.activeInHierarchy || camara2.activeInHierarchy || camara3.activeInHierarchy)
+        {
+            pressE.SetActive(false);
+        }
         switch (puzzleNameIs)
         {
             case "Rompecabezas":

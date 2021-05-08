@@ -44,7 +44,6 @@ public class Candado : MonoBehaviour
     }
     public bool DesactivarPuzzle()
     {
-        PressE.SetActive(false);
         return puzzleActivo = false;
     }
     public void PuzzleActivated()
@@ -56,7 +55,7 @@ public class Candado : MonoBehaviour
         camara.SetActive(true);
         mouseLocking.m_MouseLook.SetCursorLock(false);
         mouseLocking.m_WalkSpeed = 0;
-        PressE.SetActive(false);
+
     }
     public void PuzzleDesactivated()
     {

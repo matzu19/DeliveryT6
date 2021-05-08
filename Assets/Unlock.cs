@@ -9,7 +9,7 @@ public class Unlock : MonoBehaviour
 
     public void UnlockedPuzzle()
     {
-        Destroy(camara);
+        camara.SetActive(false);
         StartCoroutine(Unlocked());
     }
  IEnumerator Unlocked()
