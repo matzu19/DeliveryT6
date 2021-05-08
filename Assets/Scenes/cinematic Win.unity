@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Some_Pliers
       objectReference: {fileID: 0}
+    - target: {fileID: 1292561831291114, guid: 30099e2044d32004098fb1260fa8c753, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4074895125682146, guid: 30099e2044d32004098fb1260fa8c753, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1454,6 +1458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: candado 02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f3ec12e3051f1148a1ca0f6bb0587c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f3ec12e3051f1148a1ca0f6bb0587c9, type: 3}
 --- !u!4 &255889649 stripped
@@ -1931,6 +1940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11bb505f04194454580d587614cf8e7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bb505f04194454580d587614cf8e7d, type: 3}
@@ -2631,6 +2645,7 @@ MonoBehaviour:
   stream: 0
   win: 0
   guantes: {fileID: 0}
+  screw: {fileID: 0}
   canvaDamage: {fileID: 0}
   g_message: {fileID: 0}
   message: {fileID: 0}
@@ -3568,6 +3583,7 @@ MonoBehaviour:
   stream: 0
   win: 0
   guantes: {fileID: 0}
+  screw: {fileID: 0}
   canvaDamage: {fileID: 0}
   g_message: {fileID: 0}
   message: {fileID: 0}
@@ -5653,6 +5669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: remy@Sitting Weapon Grab
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30ed6f540d0915442934b3cddfde79b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ed6f540d0915442934b3cddfde79b8, type: 3}
 --- !u!1 &1174044698
@@ -5845,6 +5866,7 @@ MonoBehaviour:
   stream: 0
   win: 0
   guantes: {fileID: 0}
+  screw: {fileID: 0}
   canvaDamage: {fileID: 0}
   g_message: {fileID: 0}
   message: {fileID: 0}

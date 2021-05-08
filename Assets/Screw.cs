@@ -10,7 +10,9 @@ public class Screw : MonoBehaviour
 
     public void RecogerObjeto()
     {
-        pickAudio.Play();
+        pickAudio.Play();            
         recogible.AddObject("Screw");
     }
+
+    
 }
