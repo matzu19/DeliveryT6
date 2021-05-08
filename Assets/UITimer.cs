@@ -14,7 +14,7 @@ public class UITimer : MonoBehaviour
     private void Awake()
     {
 		canvaLose.apagar();
-        timer = 600f;
+        timer = 300f;
     }
 	void Update()
 	{
@@ -23,8 +23,8 @@ public class UITimer : MonoBehaviour
 		int seconds = Mathf.FloorToInt(timer % 60F);
 		int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);
 		timerMinutes.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-		if (timer <= 400f && timer > 200f) timerMinutes.color = colorMid;
-		else if (timer <= 200f && timer > 0f) timerMinutes.color = ColorFinal;
+		if (timer <= 200f && timer > 100f) timerMinutes.color = colorMid;
+		else if (timer <= 60f && timer > 0f) timerMinutes.color = ColorFinal;
 		if (timer <= 0)
 		{
 			canvaLose.perdiste();
