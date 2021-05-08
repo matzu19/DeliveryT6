@@ -18,12 +18,6 @@ public class CheckInteraction : MonoBehaviour
 
     private InteractionReceiver currentReceiver;
 
-
-    private void Start()
-    {
-
-    }
-
     void Update()
     {
         if (currentReceiver != null)

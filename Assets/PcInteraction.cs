@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PcInteraction : MonoBehaviour, IAction
 {
-    [SerializeField] private GameObject CanvasPuzzle, reticula;
+    [SerializeField] private GameObject CanvasPuzzle, canvasGeneral, reticula, camara;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
  
     void Awake()
@@ -16,6 +16,8 @@ public class PcInteraction : MonoBehaviour, IAction
     public void Back()
     {
         CanvasPuzzle.gameObject.SetActive(false);
+        camara.gameObject.SetActive(false);
+        canvasGeneral.gameObject.SetActive(true);
         mouseLocking.m_MouseLook.SetCursorLock(true);
         reticula.SetActive(true);
         mouseLocking.m_WalkSpeed = 5;
@@ -24,6 +26,8 @@ public class PcInteraction : MonoBehaviour, IAction
     {    
         mouseLocking.m_MouseLook.SetCursorLock(false);
         CanvasPuzzle.gameObject.SetActive(true);  
+        canvasGeneral.gameObject.SetActive(false);  
+        camara.gameObject.SetActive(true);  
         reticula.SetActive(false);
         mouseLocking.m_WalkSpeed = 0;
 

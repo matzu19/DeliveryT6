@@ -6,10 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class InteractionReceiver : MonoBehaviour
 {
-
-    [SerializeField]
-    private string interactMessage;
-
     [SerializeField]
     private GameObject[] objectsWithActions;
 
