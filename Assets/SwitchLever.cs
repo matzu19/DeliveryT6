@@ -24,6 +24,8 @@ public class SwitchLever : MonoBehaviour, IAction
         g_message.SetActive(false);
         sound = gameObject.GetComponent<AudioSource>();
         canvaDamage.gameObject.SetActive(false);
+    
+
     }
 
     
