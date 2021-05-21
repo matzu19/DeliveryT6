@@ -15198,7 +15198,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182080027}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -20054,8 +20054,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.6094246, y: 1.7647865, z: 1}
-  m_Center: {x: 0.0465312, y: 0.38239324, z: 0}
+  m_Size: {x: 2.6094246, y: 2.8156097, z: 0.81659377}
+  m_Center: {x: 0.0465312, y: 0.90780485, z: -0.09170315}
 --- !u!1 &1646256664
 GameObject:
   m_ObjectHideFlags: 0
@@ -26731,9 +26731,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2127045738}
-  - component: {fileID: 2127045741}
   - component: {fileID: 2127045740}
   - component: {fileID: 2127045739}
+  - component: {fileID: 2127045741}
   m_Layer: 0
   m_Name: Candado
   m_TagString: Selectable
@@ -26802,8 +26802,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127045737}
   m_Mesh: {fileID: -5495902117074765545, guid: 9f3ec12e3051f1148a1ca0f6bb0587c9, type: 3}
---- !u!65 &2127045741
-BoxCollider:
+--- !u!64 &2127045741
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26812,9 +26812,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.189138, y: 4.2043166, z: 17.475977}
-  m_Center: {x: 0, y: 1.7235823, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 9f3ec12e3051f1148a1ca0f6bb0587c9, type: 3}
 --- !u!1 &2139674279
 GameObject:
   m_ObjectHideFlags: 0
