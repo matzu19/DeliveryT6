@@ -68,6 +68,12 @@ public class SwitchLever : MonoBehaviour, IAction
             g_message.SetActive(true);
             StartCoroutine(waitTimeOn(g_message));
         }
+        else if (n == 2 && screw.gameObject.activeInHierarchy && guantes.guantesPuesto())
+        {
+            message.text = ("The machine has no energy");
+            g_message.SetActive(true);
+            StartCoroutine(waitTimeOn(g_message));
+        }
         else if(stream)
         {
             canvaDamage.SetActive(true);
@@ -78,12 +84,7 @@ public class SwitchLever : MonoBehaviour, IAction
             g_message.SetActive(true);
             StartCoroutine(waitTimeOn(g_message));
         }
-        else if (n == 2 && screw.gameObject.activeInHierarchy)
-        {
-            message.text = ("The machine has no energy");
-            g_message.SetActive(true);
-            StartCoroutine(waitTimeOn(g_message));
-        }
+       
         else if (n==2)
         {
             message.text = ("This lever has a missing screw");
