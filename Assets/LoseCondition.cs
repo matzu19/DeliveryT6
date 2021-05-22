@@ -9,7 +9,7 @@ public class LoseCondition : MonoBehaviour
 
     public void perdiste()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("cinematic Lose_");
         //loseCanvas.SetActive(true);
         //Time.timeScale = 0;
     }
