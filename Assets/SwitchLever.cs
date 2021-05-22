@@ -74,6 +74,12 @@ public class SwitchLever : MonoBehaviour, IAction
             g_message.SetActive(true);
             StartCoroutine(waitTimeOn(g_message));
         }
+        else if (n == 2 && guantes.guantesPuesto())
+        {
+            message.text = ("This lever has a missing screw");
+            g_message.SetActive(true);
+            StartCoroutine(waitTimeOn(g_message));
+        }
         else if(stream)
         {
             canvaDamage.SetActive(true);
