@@ -7,7 +7,7 @@ public class ToMainManu : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
     void Start()
     {
