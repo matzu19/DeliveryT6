@@ -27,7 +27,7 @@ public class GameControlA : MonoBehaviour
 
             
             youWin = true;
-            gano = false;
+            
             //door.GetComponent<Animation>().Play();
             door.GetComponent<Animator>().enabled=true;
             //Destroy(door);
