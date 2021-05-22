@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseCondition : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class LoseCondition : MonoBehaviour
 
     public void perdiste()
     {
+        SceneManager.LoadScene("MainMenu");
         //loseCanvas.SetActive(true);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
     public void apagar()
     {
