@@ -23,7 +23,7 @@ public class WinCondition : MonoBehaviour
             {
                 SceneManager.LoadScene("cinematic Win");
                 //canvaWin.SetActive(true);
-                Time.timeScale = 0;
+                //Time.timeScale = 0;
             }
         }
         catch (NullReferenceException)
