@@ -10473,6 +10473,7 @@ MonoBehaviour:
   - {fileID: 170959959}
   - {fileID: 659976898}
   door: {fileID: 919132148364781176}
+  Guantes: {fileID: 1739417409}
 --- !u!82 &755132447
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20926,8 +20927,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48594093, y: 0.26237226, z: 0.16385353}
-  m_Center: {x: 0.0031495094, y: 0.005052328, z: 0.006315291}
+  m_Size: {x: 0.86992276, y: 0.84154034, z: 0.16385353}
+  m_Center: {x: 0.17703825, y: 0.017961517, z: 0.0063152914}
 --- !u!23 &1739417412
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20983,7 +20984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739417409}
   m_LocalRotation: {x: -0.49093574, y: 0.50890297, z: 0.50890285, w: 0.4909357}
-  m_LocalPosition: {x: -0.07, y: 0.591, z: -14.989}
+  m_LocalPosition: {x: 0.016, y: 1.213, z: -14.728}
   m_LocalScale: {x: 1.1566, y: 1.1566, z: 1.1566}
   m_Children: []
   m_Father: {fileID: 687212634}

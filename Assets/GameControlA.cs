@@ -11,11 +11,12 @@ public class GameControlA : MonoBehaviour
     //[SerializeField] private GameObject camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton //cambio de Santiago
     //[SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     public static bool youWin;
-    [SerializeField] private GameObject door;
+    [SerializeField] private GameObject door,Guantes;
     bool gano;
 
     void Awake()
     {
+        Guantes.SetActive(false);
         gano = false;
         youWin = false;
     }
@@ -34,6 +35,7 @@ public class GameControlA : MonoBehaviour
             if (gano == false)
             {
                 GetComponent<AudioSource>().Play();
+                Guantes.SetActive(true);
                 gano = true;
                 print("debe reproducir sonido puerta");
             }
