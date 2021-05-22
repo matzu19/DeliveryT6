@@ -11,7 +11,7 @@ public class TouchRotateA : MonoBehaviour
         if (!GameControlA.youWin)
         {
             transform.Rotate(0f, 0f, 90f);
-            flipSound.Play();
+           // flipSound.Play();
         }
 
     }

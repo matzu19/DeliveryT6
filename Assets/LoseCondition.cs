@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LoseCondition : MonoBehaviour
 {
-    [SerializeField] private GameObject loseCanvas;
+   // [SerializeField] private GameObject loseCanvas;
 
     public void perdiste()
     {
-        loseCanvas.SetActive(true);
-        Time.timeScale = 0;
+     //   loseCanvas.SetActive(true);
+      //  Time.timeScale = 0;
     }
     public void apagar()
     {
-        loseCanvas.SetActive(false);
+       // loseCanvas.SetActive(false);
     }
 }
