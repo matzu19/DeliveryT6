@@ -10,9 +10,11 @@ public class GameControl : MonoBehaviour
     [SerializeField] private GameObject  camara, canvasGeneral, reticula, canvasPuzzle, puzzle1, boton, Nota, rompekbzas; //cambio de Santiago
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController mouseLocking;
     public static bool youWin;
+    [SerializeField] Sprite sprite1,sprite2;
 
     void Awake()
     {
+        rompekbzas.GetComponent<SpriteRenderer>().sprite = sprite1;
         Nota.SetActive(false);
         //winText.SetActive(false);
         youWin = false;
@@ -27,6 +29,7 @@ public class GameControl : MonoBehaviour
         {
             rompekbzas.tag = "Untagged";
             Nota.SetActive(true);
+            rompekbzas.GetComponent<SpriteRenderer>().sprite = sprite2;
             youWin = true;
             boton.SetActive(false);
            // winText.SetActive(true);
